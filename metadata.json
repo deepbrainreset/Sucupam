@@ -1,0 +1,8 @@
+{
+  "name": "Sucupam",
+  "description": "Atelier argentino de souvenirs personalizados y papelería artesanal premium para eventos inolvidables.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

@@ -1,0 +1,103 @@
+@import "tailwindcss";
+
+@theme {
+  --color-brand-paper: #FFFDF9; /* Ivory background */
+  --color-brand-ink: #5F5A57; /* Warm Gray text */
+  --color-brand-dark: #373332; /* Rich dark warm charcoal gray for headings */
+  --color-brand-primary: #EBC7D4; /* Dusty Pink */
+  --color-brand-secondary: #DCCFEA; /* Lavender Mist */
+  --color-brand-accent: #F4E8DD; /* Champagne Beige */
+  --color-brand-gold: #C5A880; /* Elegant gold accent */
+  --color-whatsapp-green: #25D366;
+  --color-whatsapp-dark: #128C7E;
+
+  --font-serif: "Playfair Display", Georgia, serif;
+  --font-sans: "Inter", system-ui, -apple-system, sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
+
+  /* Custom tracking */
+  --letter-spacing-luxury: 0.18em;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    background-color: var(--color-brand-paper);
+    color: var(--color-brand-ink);
+  }
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-serif);
+    color: var(--color-brand-dark);
+  }
+}
+
+@layer utilities {
+  /* Scrollbars */
+  ::-webkit-scrollbar {
+    width: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    background-color: var(--color-brand-ivory);
+  }
+  ::-webkit-scrollbar-thumb {
+    background-color: #d1d5db; /* gray-300 */
+    border-radius: 9999px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background-color: var(--color-brand-gold);
+  }
+
+  /* Fade-in Animation */
+  .fade-in {
+    animation: fadeIn 0.8s ease-out forwards;
+  }
+
+  /* Prose typography styling matching the original index_bundle.css */
+  .prose {
+    max-width: none;
+    color: #374151; /* gray-700 */
+    line-height: 1.8;
+  }
+  .prose p {
+    margin-bottom: 1.5rem;
+  }
+  .prose h2 {
+    font-size: 1.875rem; /* text-3xl */
+    font-family: var(--font-serif);
+    color: var(--color-brand-ink);
+    margin-top: 3rem;
+    margin-bottom: 1.5rem;
+    border-bottom: 1px solid #f3f4f6; /* gray-100 */
+    padding-bottom: 0.5rem;
+    text-transform: capitalize;
+  }
+  .prose h3 {
+    font-size: 1.25rem; /* text-xl */
+    font-family: var(--font-serif);
+    color: var(--color-brand-ink);
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+  }
+  .prose strong {
+    color: var(--color-brand-ink);
+    font-weight: 600;
+  }
+  .prose em {
+    color: var(--color-brand-gold);
+    font-family: var(--font-serif);
+    font-style: italic;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
