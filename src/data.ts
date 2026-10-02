@@ -98,7 +98,14 @@ La presentación es divina: tus invitados se llevarán un hermoso recuerdo, idea
 
 Usos: Ideales para bodas al aire libre, ceremonias en iglesias, eventos nocturnos o simplemente como un recuerdo acogedor.`,
     coverImageUrl: "https://res.cloudinary.com/dyaun9c0q/image/upload/v1774488189/portada_mantas_mno1nu.webp",
-    galleryImageUrls: [],
+    galleryImageUrls: [
+        "https://res.cloudinary.com/dw4k14vmn/image/upload/v1790959343/sucupam/drive-gallery/mantas/10YUJw6wtKqIHemAcH_g_w8CJw6WRMA4_.jpg",
+        "https://res.cloudinary.com/dw4k14vmn/image/upload/v1790959346/sucupam/drive-gallery/mantas/1-xhGEtTiRdLOGP7eOGf2T3r8Lh3IDD52.jpg",
+        "https://res.cloudinary.com/dw4k14vmn/image/upload/v1790959351/sucupam/drive-gallery/mantas/1-sHGcNYlwWpR6GXaOAjv86aQx_NgLzKo.jpg",
+        "https://res.cloudinary.com/dw4k14vmn/image/upload/v1790959355/sucupam/drive-gallery/mantas/1-gAUgGeYxUppKSAKRvGHFTPsxS5shfqa.jpg",
+        "https://res.cloudinary.com/dw4k14vmn/image/upload/v1790959638/sucupam/drive-gallery/mantas/1pPu8XYfKbk1G33naSJyNLAO28JJ6ZfRz.png",
+        "https://res.cloudinary.com/dw4k14vmn/image/upload/v1790959642/sucupam/drive-gallery/mantas/1cj9HIjOQjg7NrH8T_7KBJX6NBGlHQNgZ.png"
+    ],
     metaTitle: "Mantas Polares Personalizadas para Souvenirs | Sucupam",
     metaDescription: "Mantas personalizadas de 1.20x0.80m para bodas y eventos. El souvenir más cálido y original de Argentina.",
     price: "Presupuesto a medida según cantidad"
@@ -124,7 +131,10 @@ Características y Calidad:
 Personalización Exclusiva: Incluyen vinilo adhesivo de alta calidad, diseñado a tu gusto.
 Medidas Prácticas: 15 cm (largo) x 11 cm (alto) x 7 cm (profundidad).`,
     coverImageUrl: "https://i.ibb.co/4kfq2pV/V.png",
-    galleryImageUrls: [],
+    galleryImageUrls: [
+        "https://res.cloudinary.com/dw4k14vmn/image/upload/v1790959359/sucupam/drive-gallery/valijitas/15eMv-1T46tEZTa3HekN6cgdvo8Ib-ZOz.png",
+        "https://res.cloudinary.com/dw4k14vmn/image/upload/v1790959365/sucupam/drive-gallery/valijitas/15ZGhv7FbKBztZ-GBhnQaVtCwvjWkNxR6.jpg"
+    ],
     metaTitle: "Valijitas Personalizadas Souvenirs | Sucupam",
     metaDescription: "Valijitas de 15x11x7cm personalizadas. Ideales para kits anti-resaca, bautismos y cumpleaños infantiles.",
     price: "Presupuesto a medida según cantidad"
@@ -149,7 +159,13 @@ Diseño: A elección.
 Medidas: 8 x 20 cm aproximadamente
 Impresión: Full color exterior o interior`,
     coverImageUrl: "https://i.ibb.co/FbWRP1m1/1762967228814.jpg",
-    galleryImageUrls: [],
+    galleryImageUrls: [
+        "https://res.cloudinary.com/dw4k14vmn/image/upload/v1790959369/sucupam/drive-gallery/conos/1-dRcwUDI7mJO3D7Ra3pRyBhuH5ne5OAP.jpg",
+        "https://res.cloudinary.com/dw4k14vmn/image/upload/v1790959374/sucupam/drive-gallery/conos/1-W3WkxNehHt16ssNMYPNeCywBHuh4p82.jpg",
+        "https://res.cloudinary.com/dw4k14vmn/image/upload/v1790959378/sucupam/drive-gallery/conos/1-Q7h8N8FsTnURVJBrbe_X9gScv0x477l.jpg",
+        "https://res.cloudinary.com/dw4k14vmn/image/upload/v1790959382/sucupam/drive-gallery/conos/1-OFFfD_M_9ub1Ap6FQsCy1SyBuMDyeBF.jpg",
+        "https://res.cloudinary.com/dw4k14vmn/image/upload/v1790959386/sucupam/drive-gallery/conos/1-Nx-5IIEenZz79XP55DH1qvleL-Ku2Kk.jpg"
+    ],
     metaTitle: "Conos para Arroz y Pétalos Personalizados | Sucupam",
     metaDescription: "Conos personalizados para bodas y ceremonias. Ideales para arroz, pétalos o confeti. Diseño 100% a medida.",
     price: "Presupuesto a medida según cantidad"
@@ -168,7 +184,16 @@ Diseñados especialmente para vos, con colores, nombres y detalles a elección.
 
 Son prácticos, elegantes y una opción económica para sorprender a tus invitados con un recuerdo original y funcional.`,
     coverImageUrl: "https://i.ibb.co/RpdSL657/4.jpg",
-    galleryImageUrls: [],
+    galleryImageUrls: [
+        "https://res.cloudinary.com/dw4k14vmn/image/upload/v1790959462/sucupam/drive-gallery/paletas/10Do_qdlUA9J2OB1wUoI2YSbHwxrAkVQ2.jpg",
+        "https://res.cloudinary.com/dw4k14vmn/image/upload/v1790959466/sucupam/drive-gallery/paletas/108LTngbZeW1Cn8Qi6V_BhQIiag_FJWMY.jpg",
+        "https://res.cloudinary.com/dw4k14vmn/image/upload/v1790959471/sucupam/drive-gallery/paletas/107qi4ZsGK9DIULEnoq28Y312trRtuM31.jpg",
+        "https://res.cloudinary.com/dw4k14vmn/image/upload/v1790959475/sucupam/drive-gallery/paletas/106J1rzYcUH3LHjuXjMDAiBEW1CU7VHap.jpg",
+        "https://res.cloudinary.com/dw4k14vmn/image/upload/v1790959479/sucupam/drive-gallery/paletas/10256pzulzG_403zZpGHQpW7zP4CUUo2n.jpg",
+        "https://res.cloudinary.com/dw4k14vmn/image/upload/v1790959453/sucupam/drive-gallery/abanicos/10021Jwc3U0-cxANGIXFga_owAkbnrHYl.png",
+        "https://res.cloudinary.com/dw4k14vmn/image/upload/v1790959458/sucupam/drive-gallery/abanicos/10-D50UtwoGRZsCZENUG4wRnVdxCPkNKU.jpg",
+        "https://res.cloudinary.com/dw4k14vmn/image/upload/v1790959718/sucupam/drive-gallery/abanicos/10trpF10eLpGphZD45GiF0iMrBiy3cZuq.png"
+    ],
     metaTitle: "Abanicos Personalizados para Eventos | Sucupam",
     metaDescription: "Abanicos de papel personalizados para bodas y 15 años. El souvenir ideal para eventos al aire libre en Argentina.",
     price: "Presupuesto a medida según cantidad"
@@ -188,7 +213,12 @@ Son ideales para ceremonias, eventos al aire libre, bodas, 15 años, comuniones,
 Medidas: 10 cm de ancho x 20,5 cm de alto
 Presentación cuidada y lista para entregar a tus invitados.`,
     coverImageUrl: "https://i.ibb.co/NnJdmmKq/1762114158184.jpg",
-    galleryImageUrls: [],
+    galleryImageUrls: [
+        "https://res.cloudinary.com/dw4k14vmn/image/upload/v1790959693/sucupam/drive-gallery/paletas/1TLX2R8vr7vUR3wFZwx3gsgLg3-TjouIv.jpg",
+        "https://res.cloudinary.com/dw4k14vmn/image/upload/v1790959705/sucupam/drive-gallery/paletas/1_mTqFIvHowOH3loygKHYdh0RRCIk5N_Y.png",
+        "https://res.cloudinary.com/dw4k14vmn/image/upload/v1790959709/sucupam/drive-gallery/paletas/1FBP2nEUqgC9AHZqUSLWxuYDHMA6YFQHi.png",
+        "https://res.cloudinary.com/dw4k14vmn/image/upload/v1790959713/sucupam/drive-gallery/paletas/1AgQLzFfMIA5AWCyI8fR_5BKMhvbRv0DH.png"
+    ],
     metaTitle: "Abanicos Paleta Personalizados | Sucupam Argentina",
     metaDescription: "Abanicos tipo paleta con palitos de madera y diseño rústico. El souvenir ideal para bautismos y bodas campestres.",
     price: "Presupuesto a medida según cantidad"
@@ -212,7 +242,11 @@ Formatos a Elegir:
 Carpita Simple: Diseño clásico y elegante.
 Montado sobre Papel Kraft/Blanco: Para un estilo rústico (Kraft) o sobrio y moderno (Blanco).`,
     coverImageUrl: "https://i.ibb.co/cS5b3QxZ/1762571037492.png",
-    galleryImageUrls: [],
+    galleryImageUrls: [
+        "https://res.cloudinary.com/dw4k14vmn/image/upload/v1790959484/sucupam/drive-gallery/numeros/10hyK1Mm205qlvOQW9kOGC0XHHfrkN_b6.jpg",
+        "https://res.cloudinary.com/dw4k14vmn/image/upload/v1790959488/sucupam/drive-gallery/numeros/10gMamEOXIgfYyoJeye_gZTUHecW1ibKZ.jpg",
+        "https://res.cloudinary.com/dw4k14vmn/image/upload/v1790959492/sucupam/drive-gallery/numeros/12q5KHLdZkTKlwEmb3wh00f3_ZeWjPQq8.png"
+    ],
     metaTitle: "Números de Mesa Personalizados para Eventos | Sucupam",
     metaDescription: "Números de mesa para casamientos y 15 años. Formato carpita o kraft, 100% personalizados para tu fiesta en Argentina.",
     price: "Presupuesto a medida según cantidad"
@@ -233,7 +267,11 @@ Cada kit incluye un pañuelo de papel descartable de calidad, presentado elegant
 
 ¡Prepara tu evento para las lágrimas más hermosas!`,
     coverImageUrl: "https://res.cloudinary.com/dyaun9c0q/image/upload/v1774487881/1762970216496_ykkcrr.jpg",
-    galleryImageUrls: [],
+    galleryImageUrls: [
+        "https://res.cloudinary.com/dw4k14vmn/image/upload/v1790959390/sucupam/drive-gallery/panuelos/11i79WzC6UAMXE0KV2i_KX0DeJM3vRfU9.jpg",
+        "https://res.cloudinary.com/dw4k14vmn/image/upload/v1790959395/sucupam/drive-gallery/panuelos/110TPO3XgcelUUZBRdCCYMomOXSy0tmIo.jpg",
+        "https://res.cloudinary.com/dw4k14vmn/image/upload/v1790959399/sucupam/drive-gallery/panuelos/10yMvTI0UTyQok7rLKY6U6WwxlHczjDE_.jpg"
+    ],
     metaTitle: "Pañuelos Lágrimas de Felicidad para Bodas | Sucupam",
     metaDescription: "Kits de pañuelos personalizados para ceremonias emotivas. El detalle ideal para las lágrimas de felicidad en tu casamiento.",
     price: "Presupuesto a medida según cantidad"
@@ -252,7 +290,12 @@ Nuestras tags son pequeñas tarjetas de agradecimiento o identificación que per
 
 Usos: Ideales para atar a souvenirs, identificar regalos, cerrar bolsas de papel o usarlas como etiquetas de mesas de dulces. Disponibles en formas redondas, caladas, o rectangulars. Impresas en papel de alta calidad.`,
     coverImageUrl: "https://res.cloudinary.com/dyaun9c0q/image/upload/v1774488385/1774028143018_ffrp3f.jpg",
-    galleryImageUrls: [],
+    galleryImageUrls: [
+        "https://res.cloudinary.com/dw4k14vmn/image/upload/v1790959671/sucupam/drive-gallery/tags/12izYmOBf5V4j5hw_SHSs6STAY4tSnmFC.jpg",
+        "https://res.cloudinary.com/dw4k14vmn/image/upload/v1790959675/sucupam/drive-gallery/tags/12hAh5N4AXGiGUdgYPkI7PNrFOzOjCtRJ.jpg",
+        "https://res.cloudinary.com/dw4k14vmn/image/upload/v1790959680/sucupam/drive-gallery/tags/12_zTc59iqEubXs4QB2jfItk9jykD3kra.jpg",
+        "https://res.cloudinary.com/dw4k14vmn/image/upload/v1790959690/sucupam/drive-gallery/tags/1YaADWtCJdq1TgL8xXIpMAaIXQ_sZR_EP.png"
+    ],
     metaTitle: "Tags y Tarjetitas Personalizadas para Souvenirs | Sucupam",
     metaDescription: "Tarjetitas personalizadas para souvenirs and regalos. Tags de agradecimiento con diseño exclusivo en Argentina.",
     price: "Presupuesto a medida según cantidad"
@@ -276,7 +319,12 @@ Diseño 100% a Medida: Creamos el diseño perfecto para cumpleaños, casamientos
 
 ¡Personalizá cada detalle y convertí tu evento en un momento inolvidable! Consultanos hoy para comenzar a diseñar.`,
     coverImageUrl: "https://i.ibb.co/Z1xLdf4Y/5.jpg",
-    galleryImageUrls: [],
+    galleryImageUrls: [
+        "https://res.cloudinary.com/dw4k14vmn/image/upload/v1790959403/sucupam/drive-gallery/chocolates/12IwmDsM3zHMXg2-sJj-coV-RdKpx9iAV.jpg",
+        "https://res.cloudinary.com/dw4k14vmn/image/upload/v1790959407/sucupam/drive-gallery/chocolates/12Gn5kI2VuM7lVy_pYPn5aK8ztd8zP8Qz.jpg",
+        "https://res.cloudinary.com/dw4k14vmn/image/upload/v1790959411/sucupam/drive-gallery/chocolates/12AUb_uVaJ2am4GyUToaB4pPdZoYGrA1x.jpg",
+        "https://res.cloudinary.com/dw4k14vmn/image/upload/v1790959667/sucupam/drive-gallery/chocolates/1PsSpg_YU_vBV1ukCUGFWbex-pWkjeL7c.png"
+    ],
     metaTitle: "Tarjetas con Chocolatín Personalizadas Souvenirs | Sucupam",
     metaDescription: "Souvenirs dulces y elegantes: tarjetas personalizadas con chocolate para todo tipo de eventos en Argentina.",
     price: "Presupuesto a medida según cantidad"
@@ -308,7 +356,13 @@ El producto es de elaboración artesanal y por encargo. El tiempo de confección
 
 Política de Devolución: Al ser un artículo personalizado y hecho a medida, no se admiten devoluciones una vez que se ha iniciado el proceso de elaboración.`,
     coverImageUrl: "https://i.ibb.co/9kPKh3pR/1761506119875.jpg",
-    galleryImageUrls: [],
+    galleryImageUrls: [
+        "https://res.cloudinary.com/dw4k14vmn/image/upload/v1790959646/sucupam/drive-gallery/raspaditas/1NslQsNAUAVUKSl-YX1aGgJUHxwg6wZ5W.jpg",
+        "https://res.cloudinary.com/dw4k14vmn/image/upload/v1790959650/sucupam/drive-gallery/raspaditas/13YB_8qno6YkpBqVBE8YAwckzzCcwUTSQ.jpg",
+        "https://res.cloudinary.com/dw4k14vmn/image/upload/v1790959654/sucupam/drive-gallery/raspaditas/13NmdBHdy-b3-II8JPnbWc_tiNP0Y6YHg.jpg",
+        "https://res.cloudinary.com/dw4k14vmn/image/upload/v1790959659/sucupam/drive-gallery/raspaditas/13De8wG2YalvxrcnopwqwZD6s8pWT7R6O.jpg",
+        "https://res.cloudinary.com/dw4k14vmn/image/upload/v1790959663/sucupam/drive-gallery/raspaditas/13DBTDiykqEtLT_dnMgCI8auNG5ztlnJT.jpg"
+    ],
     metaTitle: "Tarjetas Raspaditas Personalizadas para Fiestas | Sucupam",
     metaDescription: "Juegos interactivos para tu evento: tarjetas raspaditas personalizadas. Diversión asegurada para tus invitados.",
     price: "Presupuesto a medida según cantidad"
