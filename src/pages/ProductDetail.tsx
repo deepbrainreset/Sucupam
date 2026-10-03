@@ -217,6 +217,8 @@ export function ProductDetail() {
                   )}
                 </div>
               )}
+            </div>
+
             {/* Content Context Panel - Span 6 */}
             <div className="lg:col-span-6 lg:sticky lg:top-28">
               {/* Category tags & pricing badge */}
