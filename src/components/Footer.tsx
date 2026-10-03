@@ -91,15 +91,63 @@ export function Footer() {
                     </Link>
                   </li>
                 ))}
+              <li>
+                <Link
+                  to="/souvenirs-cumpleanos"
+                  className="text-sm text-gray-400 hover:text-white transition-colors"
+                >
+                  Souvenirs para Cumpleaños
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/souvenirs-eventos-corporativos"
+                  className="text-sm text-gray-400 hover:text-white transition-colors"
+                >
+                  Souvenirs Corporativos
+                </Link>
+              </li>
             </ul>
           </div>
 
-          {/* Column 3 - Resources */}
+          {/* Column 3 - Priority product searches */}
           <div>
             <h4 className="text-[10px] uppercase tracking-widest font-bold text-brand-gold mb-8">
-              Recursos
+              Productos Destacados
             </h4>
             <ul className="space-y-4">
+              <li>
+                <Link
+                  to="/abanicos-personalizados"
+                  className="text-sm text-gray-400 hover:text-white transition-colors"
+                >
+                  Abanicos personalizados de papel
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/panuelos-descartables-personalizados"
+                  className="text-sm text-gray-400 hover:text-white transition-colors"
+                >
+                  Pañuelitos descartables personalizados
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/tarjetas-raspaditas-personalizadas"
+                  className="text-sm text-gray-400 hover:text-white transition-colors"
+                >
+                  Tarjetas raspaditas personalizadas
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/mantas-personalizadas-eventos"
+                  className="text-sm text-gray-400 hover:text-white transition-colors"
+                >
+                  Mantas personalizadas para eventos
+                </Link>
+              </li>
               <li>
                 <Link
                   to="/blog"
@@ -110,26 +158,10 @@ export function Footer() {
               </li>
               <li>
                 <Link
-                  to="/prensa"
-                  className="text-sm text-gray-400 hover:text-white transition-colors"
-                >
-                  Media Kit & Prensa
-                </Link>
-              </li>
-              <li>
-                <Link
                   to="/souvenirs"
                   className="text-sm text-gray-400 hover:text-white transition-colors"
                 >
                   Catálogo Exclusivo
-                </Link>
-              </li>
-              <li>
-                <Link
-                  to="/contacto"
-                  className="text-sm text-gray-400 hover:text-white transition-colors"
-                >
-                  Asesoría Personalizada
                 </Link>
               </li>
             </ul>
@@ -152,6 +184,14 @@ export function Footer() {
                 <a href="mailto:sucupam@hotmail.com" className="hover:text-brand-gold transition-colors">
                   sucupam@hotmail.com
                 </a>
+              </li>
+              <li>
+                <Link
+                  to="/contacto"
+                  className="text-sm text-gray-400 hover:text-white transition-colors"
+                >
+                  Asesoría Personalizada
+                </Link>
               </li>
               <li className="pt-4">
                 <div className="flex items-center space-x-2 text-brand-gold">
