@@ -12,6 +12,32 @@ export function ProductDetail() {
   const [selectedImageIndex, setSelectedImageIndex] = useState(0);
   const [isLightboxOpen, setIsLightboxOpen] = useState(false);
 
+  const galleryImages = product
+    ? (product.galleryImageUrls.length > 0 ? product.galleryImageUrls : [product.coverImageUrl])
+    : [];
+  const showPreviousImage = () => setSelectedImageIndex((i) => (i - 1 + galleryImages.length) % galleryImages.length);
+  const showNextImage = () => setSelectedImageIndex((i) => (i + 1) % galleryImages.length);
+
+  useEffect(() => {
+    setSelectedImageIndex(0);
+    setIsLightboxOpen(false);
+  }, [productSlug]);
+
+  useEffect(() => {
+    if (!isLightboxOpen) return;
+    const onKeyDown = (event: KeyboardEvent) => {
+      if (event.key === "Escape") setIsLightboxOpen(false);
+      if (event.key === "ArrowLeft") showPreviousImage();
+      if (event.key === "ArrowRight") showNextImage();
+    };
+    document.addEventListener("keydown", onKeyDown);
+    document.body.style.overflow = "hidden";
+    return () => {
+      document.removeEventListener("keydown", onKeyDown);
+      document.body.style.overflow = "";
+    };
+  }, [isLightboxOpen, galleryImages.length]);
+
   if (!product) {
     return (
       <section className="py-24 bg-brand-paper text-center fade-in">
@@ -29,34 +55,6 @@ export function ProductDetail() {
       </section>
     );
   }
-
-  const galleryImages =
-    product.galleryImageUrls.length > 0
-      ? product.galleryImageUrls
-      : [product.coverImageUrl];
-
-  useEffect(() => {
-    setSelectedImageIndex(0);
-    setIsLightboxOpen(false);
-  }, [productSlug]);
-
-  const showPreviousImage = () => setSelectedImageIndex((i) => (i - 1 + galleryImages.length) % galleryImages.length);
-  const showNextImage = () => setSelectedImageIndex((i) => (i + 1) % galleryImages.length);
-
-  useEffect(() => {
-    if (!isLightboxOpen) return;
-    const onKeyDown = (event: KeyboardEvent) => {
-      if (event.key === "Escape") setIsLightboxOpen(false);
-      if (event.key === "ArrowLeft") showPreviousImage();
-      if (event.key === "ArrowRight") showNextImage();
-    };
-    document.addEventListener("keydown", onKeyDown);
-    document.body.style.overflow = "hidden";
-    return () => {
-      document.removeEventListener("keydown", onKeyDown);
-      document.body.style.overflow = "";
-    };
-  }, [isLightboxOpen, galleryImages.length]);
 
   // Get related products (same category, or random from dataset, max 3)
   const relatedProducts = products
