@@ -1,5 +1,6 @@
+import { useEffect, useState } from "react";
 import { useParams, Link } from "react-router-dom";
-import { ArrowLeft, MessageCircle, Sparkles, ShieldCheck, Heart, Send } from "lucide-react";
+import { ArrowLeft, ChevronLeft, ChevronRight, Maximize2, X, MessageCircle, Sparkles, ShieldCheck, Heart, Send } from "lucide-react";
 import { SEO } from "../components/SEO";
 import { SchemaMarkup } from "../components/SchemaMarkup";
 import { ProductCard } from "../components/ProductCard";
@@ -8,6 +9,8 @@ import { products } from "../data";
 export function ProductDetail() {
   const { productSlug } = useParams<{ productSlug: string }>();
   const product = products.find((p) => p.slug === productSlug);
+  const [selectedImageIndex, setSelectedImageIndex] = useState(0);
+  const [isLightboxOpen, setIsLightboxOpen] = useState(false);
 
   if (!product) {
     return (
@@ -31,6 +34,29 @@ export function ProductDetail() {
     product.galleryImageUrls.length > 0
       ? product.galleryImageUrls
       : [product.coverImageUrl];
+
+  useEffect(() => {
+    setSelectedImageIndex(0);
+    setIsLightboxOpen(false);
+  }, [productSlug]);
+
+  const showPreviousImage = () => setSelectedImageIndex((i) => (i - 1 + galleryImages.length) % galleryImages.length);
+  const showNextImage = () => setSelectedImageIndex((i) => (i + 1) % galleryImages.length);
+
+  useEffect(() => {
+    if (!isLightboxOpen) return;
+    const onKeyDown = (event: KeyboardEvent) => {
+      if (event.key === "Escape") setIsLightboxOpen(false);
+      if (event.key === "ArrowLeft") showPreviousImage();
+      if (event.key === "ArrowRight") showNextImage();
+    };
+    document.addEventListener("keydown", onKeyDown);
+    document.body.style.overflow = "hidden";
+    return () => {
+      document.removeEventListener("keydown", onKeyDown);
+      document.body.style.overflow = "";
+    };
+  }, [isLightboxOpen, galleryImages.length]);
 
   // Get related products (same category, or random from dataset, max 3)
   const relatedProducts = products
@@ -156,38 +182,43 @@ export function ProductDetail() {
             {/* Visuals Gallery Panel - Span 6 */}
             <div className="lg:col-span-6 space-y-4">
               <div className="relative rounded-[2.5rem] overflow-hidden border border-brand-accent/40 shadow-lg bg-white aspect-square">
-                <img
-                  src={product.coverImageUrl}
-                  alt={product.name}
-                  className="w-full h-full object-cover"
-                  referrerPolicy="no-referrer"
-                />
-                
-                {/* Event Tag overlay */}
-                <div className="absolute top-4 left-4 bg-white/95 backdrop-blur-sm px-4 py-1.5 rounded-full border border-brand-accent shadow-sm">
-                  <span className="text-[10px] font-sans tracking-widest font-bold text-brand-dark uppercase">
-                    {product.category}
-                  </span>
+                <button type="button" onClick={() => setIsLightboxOpen(true)} className="absolute inset-0 z-0 h-full w-full cursor-zoom-in focus-visible:outline focus-visible:outline-4 focus-visible:outline-brand-primary" aria-label={`Ampliar imagen ${selectedImageIndex + 1} de ${galleryImages.length}: ${product.name}`}>
+                  <img src={galleryImages[selectedImageIndex]} alt={`${product.name}, imagen ${selectedImageIndex + 1} de ${galleryImages.length}`} className="w-full h-full object-cover" referrerPolicy="no-referrer" />
+                </button>
+                {galleryImages.length > 1 && (
+                  <>
+                    <button type="button" onClick={showPreviousImage} className="absolute left-3 top-1/2 z-10 -translate-y-1/2 rounded-full bg-white/90 p-3 text-brand-dark shadow-md hover:bg-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-brand-primary" aria-label="Ver imagen anterior"><ChevronLeft className="h-5 w-5" /></button>
+                    <button type="button" onClick={showNextImage} className="absolute right-3 top-1/2 z-10 -translate-y-1/2 rounded-full bg-white/90 p-3 text-brand-dark shadow-md hover:bg-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-brand-primary" aria-label="Ver imagen siguiente"><ChevronRight className="h-5 w-5" /></button>
+                    <span className="absolute bottom-4 right-4 z-10 rounded-full bg-black/65 px-3 py-1 text-xs font-semibold text-white" aria-live="polite">{selectedImageIndex + 1} / {galleryImages.length}</span>
+                  </>
+                )}
+                <span className="pointer-events-none absolute bottom-4 left-4 z-10 inline-flex items-center gap-2 rounded-full bg-white/90 px-3 py-2 text-xs font-semibold text-brand-dark shadow-sm"><Maximize2 className="h-4 w-4" />Tocar para ampliar</span>
+                <div className="pointer-events-none absolute top-4 left-4 z-10 bg-white/95 backdrop-blur-sm px-4 py-1.5 rounded-full border border-brand-accent shadow-sm">
+                  <span className="text-[10px] font-sans tracking-widest font-bold text-brand-dark uppercase">{product.category}</span>
                 </div>
               </div>
-
               {galleryImages.length > 1 && (
-                <div className="grid grid-cols-4 gap-3">
+                <div className="grid grid-cols-4 gap-3" aria-label="Elegí una imagen de la galería">
                   {galleryImages.map((url, i) => (
-                    <div key={i} className="aspect-square rounded-2xl overflow-hidden border border-brand-accent bg-white shadow-sm hover:scale-105 transition-transform duration-300">
-                      <img
-                        key={i}
-                        src={url}
-                        alt={`${product.name} galería ${i + 1}`}
-                        className="w-full h-full object-cover"
-                        referrerPolicy="no-referrer"
-                      />
-                    </div>
+                    <button key={url} type="button" onClick={() => setSelectedImageIndex(i)} aria-label={`Ver imagen ${i + 1} de ${galleryImages.length}`} aria-pressed={selectedImageIndex === i} className={`aspect-square rounded-2xl overflow-hidden border bg-white shadow-sm transition-transform duration-300 hover:scale-105 focus-visible:outline focus-visible:outline-2 focus-visible:outline-brand-primary ${selectedImageIndex === i ? "border-brand-primary ring-2 ring-brand-primary/40" : "border-brand-accent"}`}>
+                      <img src={url} alt="" className="w-full h-full object-cover" loading="lazy" referrerPolicy="no-referrer" />
+                    </button>
                   ))}
                 </div>
               )}
-            </div>
-
+              {isLightboxOpen && (
+                <div className="fixed inset-0 z-[100] flex items-center justify-center bg-black/95 p-3 sm:p-8" role="dialog" aria-modal="true" aria-label={`Galería de ${product.name}`} onClick={() => setIsLightboxOpen(false)}>
+                  <button type="button" onClick={() => setIsLightboxOpen(false)} className="absolute right-4 top-4 z-20 rounded-full bg-white/15 p-3 text-white hover:bg-white/25 focus-visible:outline focus-visible:outline-2 focus-visible:outline-white" aria-label="Cerrar imagen ampliada"><X className="h-6 w-6" /></button>
+                  <img src={galleryImages[selectedImageIndex]} alt={`${product.name}, imagen ${selectedImageIndex + 1} de ${galleryImages.length}`} className="max-h-[88vh] max-w-[92vw] select-none object-contain" onClick={(event) => event.stopPropagation()} referrerPolicy="no-referrer" />
+                  {galleryImages.length > 1 && (
+                    <>
+                      <button type="button" onClick={(event) => { event.stopPropagation(); showPreviousImage(); }} className="absolute left-2 sm:left-6 top-1/2 -translate-y-1/2 rounded-full bg-white/15 p-3 text-white hover:bg-white/25 focus-visible:outline focus-visible:outline-2 focus-visible:outline-white" aria-label="Ver imagen anterior"><ChevronLeft className="h-7 w-7" /></button>
+                      <button type="button" onClick={(event) => { event.stopPropagation(); showNextImage(); }} className="absolute right-2 sm:right-6 top-1/2 -translate-y-1/2 rounded-full bg-white/15 p-3 text-white hover:bg-white/25 focus-visible:outline focus-visible:outline-2 focus-visible:outline-white" aria-label="Ver imagen siguiente"><ChevronRight className="h-7 w-7" /></button>
+                      <span className="absolute bottom-5 left-1/2 -translate-x-1/2 rounded-full bg-black/60 px-4 py-2 text-sm text-white" aria-live="polite">{selectedImageIndex + 1} / {galleryImages.length}</span>
+                    </>
+                  )}
+                </div>
+              )}
             {/* Content Context Panel - Span 6 */}
             <div className="lg:col-span-6 lg:sticky lg:top-28">
               {/* Category tags & pricing badge */}
