@@ -42,6 +42,15 @@ export function SeoLanding({
 }: SeoLandingProps) {
   const featuredProducts = products.filter((product) => productSlugs.includes(product.slug));
   const canonicalPath = path.startsWith("/") ? path : `/${path}`;
+  const galleryImages = featuredProducts
+    .flatMap((product) =>
+      product.galleryImageUrls.map((src, index) => ({
+        src,
+        alt: `${product.name.toLowerCase()} — ${h1.toLowerCase()} — foto ${index + 1}`,
+        productSlug: product.slug,
+      })),
+    )
+    .slice(0, 8);
 
   return (
     <>
@@ -144,6 +153,38 @@ export function SeoLanding({
               <div className="grid grid-cols-1 gap-8 md:grid-cols-2">
                 {featuredProducts.map((product) => (
                   <ProductCard key={product.id} product={product} />
+                ))}
+              </div>
+            </section>
+          )}
+
+          {galleryImages.length > 0 && (
+            <section className="mb-16 border-t border-brand-accent/25 pt-10" aria-labelledby="galeria-seo">
+              <h2 id="galeria-seo" className="mb-3 font-serif text-3xl font-medium text-brand-dark md:text-4xl">
+                Galería de trabajos
+              </h2>
+              <p className="mb-8 text-sm text-brand-ink">
+                Ejemplos reales del catálogo relacionados con esta categoría.
+              </p>
+              <div className="grid grid-cols-2 gap-4 md:grid-cols-3">
+                {galleryImages.map((image, index) => (
+                  <Link
+                    key={`${image.src}-${index}`}
+                    to={`/producto/${image.productSlug}`}
+                    className="group block overflow-hidden rounded-2xl border border-brand-accent/20 bg-white"
+                    aria-label={`Ver producto relacionado: ${image.alt}`}
+                  >
+                    <img
+                      src={image.src}
+                      alt={image.alt}
+                      width={800}
+                      height={800}
+                      loading="lazy"
+                      decoding="async"
+                      referrerPolicy="no-referrer"
+                      className="aspect-square h-full w-full object-cover transition-transform duration-300 group-hover:scale-[1.03]"
+                    />
+                  </Link>
                 ))}
               </div>
             </section>
