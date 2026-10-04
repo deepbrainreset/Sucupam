@@ -154,10 +154,6 @@ export const categoryCustomContent: Record<string, CustomCategoryData> = {
     ],
     faqs: [
       {
-        q: "¿Realizan factura comercial A para empresas en Argentina?",
-        a: "Emitimos comprobantes oficiales exigidos por los departamentos contables y de compras de medianas y grandes corporaciones en todo el territorio."
-      },
-      {
         q: "¿Pueden replicar la paleta de colores y logo institucional?",
         a: "Absolutamente. Solicitamos el manual de marca y los archivos de logotipo en vectores (AI, PDF, EPS o SVG) para que las impresiones reproduzcan fielmente tu identidad institucional."
       },
