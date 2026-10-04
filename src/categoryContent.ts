@@ -176,20 +176,30 @@ export const categoryCustomContent: Record<string, CustomCategoryData> = {
   // Backward compatibility with legacy routes
   "souvenirs-para-bodas": {
     paragraphs: [
-      "La celebración de una boda es uno de los sucesos más significativos. En Sucupam diseñamos y elaboramos de forma artesanal todo un ecosistema de souvenirs de boda a medida: mantas polares, pañuelos lágrimas de felicidad, conitos y tags.",
-      "Nos enfocamos en el diseño personalizado a juego con tus invitaciones impresas o digitales, permitiendo modificar los colores y monogramas heráldicos para coordinar la ambientación de la mesa o el salón al aire libre."
+      "Si buscás souvenirs para casamiento personalizados, en Sucupam reunimos opciones útiles y decorativas para acompañar la identidad visual de la celebración. La colección incluye mantas para eventos, abanicos personalizados, pañuelos para lágrimas de felicidad, conos y tags para invitados.",
+      "Trabajamos propuestas para casamientos y bodas en Buenos Aires, CABA, GBA y pedidos con envío a distintos puntos de Argentina. Cada pieza puede coordinarse con nombres, fecha, colores y estilo gráfico del evento.",
+      "Los souvenirs pueden integrarse con la papelería del casamiento para mantener una estética coherente desde la ceremonia hasta la recepción. Para eventos al aire libre o en épocas frescas, las mantas ofrecen una alternativa práctica; para celebraciones de verano, los abanicos personalizados suman utilidad durante el evento.",
+      "También podés combinar pañuelos descartables para lágrimas de felicidad, conos para pétalos, arroz o confeti, números de mesa y tags personalizados. Así, la misma línea visual puede repetirse en distintos momentos del casamiento sin depender de un único tipo de souvenir."
     ],
     faqs: [
       {
-        q: "¿Con cuánta anticipación encargar?",
-        a: "Un plazo de entre 25 y 40 días es perfecto para personalizar, aprobar y despachar."
+        q: "¿Qué souvenirs para casamiento puedo personalizar?",
+        a: "Podés consultar por mantas para eventos, abanicos, pañuelos para lágrimas de felicidad, conos, tags y otras piezas de papelería personalizada disponibles en el catálogo."
+      },
+      {
+        q: "¿Hacen souvenirs para casamientos en Buenos Aires?",
+        a: "Sí. Atendemos pedidos para CABA y distintas zonas de Buenos Aires, además de coordinar envíos a otros puntos de Argentina."
+      },
+      {
+        q: "¿Se puede coordinar el diseño con la estética del casamiento?",
+        a: "Sí. El diseño puede adaptarse con nombres, fecha, colores y recursos gráficos para mantener coherencia con la identidad visual del evento."
       }
     ],
     aio: {
-      whatIsIt: "Ecosistema de lino papelería y souvenirs para bodas y casamientos de confección artesanal.",
-      whoIsItFor: "Parejas en Argentina que buscan recuerdos distinguidos e hilos conductores estéticos en su fiesta.",
-      whenToUse: "Ceremonias al aire libre y bodas de otoño-invierno.",
-      whyChoose: "Atención premium por WhatsApp y acabados impecables sin imperfecciones."
+      whatIsIt: "Souvenirs para casamientos y bodas personalizados, con opciones de recuerdos y papelería coordinada para invitados.",
+      whoIsItFor: "Parejas y organizadores de eventos que buscan souvenirs personalizados para casamientos en Buenos Aires y Argentina.",
+      whenToUse: "En la ceremonia, recepción, mesas de invitados o como recuerdo al finalizar el casamiento.",
+      whyChoose: "Permite combinar distintos productos personalizados dentro de una misma identidad visual para el evento."
     }
   },
   "souvenirs-15-anos": {
