@@ -241,7 +241,7 @@ Impresión Doble Cara: Impresos en ambas caras para asegurar una visibilidad per
 Formatos a Elegir:
 Carpita Simple: Diseño clásico y elegante.
 Montado sobre Papel Kraft/Blanco: Para un estilo rústico (Kraft) o sobrio y moderno (Blanco).`,
-    coverImageUrl: "https://res.cloudinary.com/dw4k14vmn/image/upload/v1790959484/sucupam/drive-gallery/numeros/10hyK1Mm205qlvOQW9kOGC0XHHfrkN_b6.jpg",
+    coverImageUrl: "https://res.cloudinary.com/dw4k14vmn/image/upload/v1790959492/sucupam/drive-gallery/numeros/12q5KHLdZkTKlwEmb3wh00f3_ZeWjPQq8.png",
     galleryImageUrls: [
         "https://res.cloudinary.com/dw4k14vmn/image/upload/v1790959484/sucupam/drive-gallery/numeros/10hyK1Mm205qlvOQW9kOGC0XHHfrkN_b6.jpg",
         "https://res.cloudinary.com/dw4k14vmn/image/upload/v1790959488/sucupam/drive-gallery/numeros/10gMamEOXIgfYyoJeye_gZTUHecW1ibKZ.jpg",
@@ -289,7 +289,7 @@ Cada kit incluye un pañuelo de papel descartable de calidad, presentado elegant
 Nuestras tags son pequeñas tarjetas de agradecimiento o identificación que personalizan cualquier objeto.
 
 Usos: Ideales para atar a souvenirs, identificar regalos, cerrar bolsas de papel o usarlas como etiquetas de mesas de dulces. Disponibles en formas redondas, caladas, o rectangulars. Impresas en papel de alta calidad.`,
-    coverImageUrl: "https://res.cloudinary.com/dyaun9c0q/image/upload/v1774488385/1774028143018_ffrp3f.jpg",
+    coverImageUrl: "https://res.cloudinary.com/dw4k14vmn/image/upload/v1790959680/sucupam/drive-gallery/tags/12_zTc59iqEubXs4QB2jfItk9jykD3kra.jpg",
     galleryImageUrls: [
         "https://res.cloudinary.com/dw4k14vmn/image/upload/v1790959671/sucupam/drive-gallery/tags/12izYmOBf5V4j5hw_SHSs6STAY4tSnmFC.jpg",
         "https://res.cloudinary.com/dw4k14vmn/image/upload/v1790959675/sucupam/drive-gallery/tags/12hAh5N4AXGiGUdgYPkI7PNrFOzOjCtRJ.jpg",
@@ -355,7 +355,7 @@ Información Adicional:
 El producto es de elaboración artesanal y por encargo. El tiempo de confección comienza a correr una vez definido y aprobado el diseño final.
 
 Política de Devolución: Al ser un artículo personalizado y hecho a medida, no se admiten devoluciones una vez que se ha iniciado el proceso de elaboración.`,
-    coverImageUrl: "https://res.cloudinary.com/dw4k14vmn/image/upload/v1790959646/sucupam/drive-gallery/raspaditas/1NslQsNAUAVUKSl-YX1aGgJUHxwg6wZ5W.jpg",
+    coverImageUrl: "https://res.cloudinary.com/dw4k14vmn/image/upload/v1790959654/sucupam/drive-gallery/raspaditas/13NmdBHdy-b3-II8JPnbWc_tiNP0Y6YHg.jpg",
     galleryImageUrls: [
         "https://res.cloudinary.com/dw4k14vmn/image/upload/v1790959646/sucupam/drive-gallery/raspaditas/1NslQsNAUAVUKSl-YX1aGgJUHxwg6wZ5W.jpg",
         "https://res.cloudinary.com/dw4k14vmn/image/upload/v1790959650/sucupam/drive-gallery/raspaditas/13YB_8qno6YkpBqVBE8YAwckzzCcwUTSQ.jpg",
