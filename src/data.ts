@@ -71,7 +71,7 @@ export const eventCategories: EventCategory[] = [
     description: "Celebrá la llegada del bebé con souvenirs tiernos y prácticos. Diseños personalizados para sorprender a tus amigas.",
     metaTitle: "Souvenirs Baby Shower Originales y Tiernos | Sucupam",
     metaDescription: "Los mejores souvenirs para baby shower en Argentina. Detalles personalizados y creativos para una bienvenida especial.",
-    heroImage: "https://i.ibb.co/4kfq2pV/V.png"
+    heroImage: "https://res.cloudinary.com/dw4k14vmn/image/upload/v1790959359/sucupam/drive-gallery/valijitas/15eMv-1T46tEZTa3HekN6cgdvo8Ib-ZOz.png"
   },
   {
     name: "15 Años",
@@ -79,7 +79,7 @@ export const eventCategories: EventCategory[] = [
     description: "Souvenirs modernos y con estilo para tu fiesta de 15. Detalles que reflejan tu personalidad y sorprenden a tus invitados.",
     metaTitle: "Souvenirs para 15 Años Modernos | Sucupam Argentina",
     metaDescription: "Buscás souvenirs para 15 años? Abanicos, raspaditas y kits personalizados para que tu fiesta sea única.",
-    heroImage: "https://i.ibb.co/RpdSL657/4.jpg"
+    heroImage: "https://res.cloudinary.com/dw4k14vmn/image/upload/v1790959462/sucupam/drive-gallery/paletas/10Do_qdlUA9J2OB1wUoI2YSbHwxrAkVQ2.jpg"
   }
 ];
 
@@ -158,7 +158,7 @@ Material: Papel de gramaje medio
 Diseño: A elección.
 Medidas: 8 x 20 cm aproximadamente
 Impresión: Full color exterior o interior`,
-    coverImageUrl: "https://i.ibb.co/FbWRP1m1/1762967228814.jpg",
+    coverImageUrl: "https://res.cloudinary.com/dw4k14vmn/image/upload/v1790959369/sucupam/drive-gallery/conos/1-dRcwUDI7mJO3D7Ra3pRyBhuH5ne5OAP.jpg",
     galleryImageUrls: [
         "https://res.cloudinary.com/dw4k14vmn/image/upload/v1790959369/sucupam/drive-gallery/conos/1-dRcwUDI7mJO3D7Ra3pRyBhuH5ne5OAP.jpg",
         "https://res.cloudinary.com/dw4k14vmn/image/upload/v1790959374/sucupam/drive-gallery/conos/1-W3WkxNehHt16ssNMYPNeCywBHuh4p82.jpg",
@@ -212,7 +212,7 @@ Son ideales para ceremonias, eventos al aire libre, bodas, 15 años, comuniones,
 
 Medidas: 10 cm de ancho x 20,5 cm de alto
 Presentación cuidada y lista para entregar a tus invitados.`,
-    coverImageUrl: "https://i.ibb.co/NnJdmmKq/1762114158184.jpg",
+    coverImageUrl: "https://res.cloudinary.com/dw4k14vmn/image/upload/v1790959693/sucupam/drive-gallery/paletas/1TLX2R8vr7vUR3wFZwx3gsgLg3-TjouIv.jpg",
     galleryImageUrls: [
         "https://res.cloudinary.com/dw4k14vmn/image/upload/v1790959693/sucupam/drive-gallery/paletas/1TLX2R8vr7vUR3wFZwx3gsgLg3-TjouIv.jpg",
         "https://res.cloudinary.com/dw4k14vmn/image/upload/v1790959705/sucupam/drive-gallery/paletas/1_mTqFIvHowOH3loygKHYdh0RRCIk5N_Y.png",
@@ -241,7 +241,7 @@ Impresión Doble Cara: Impresos en ambas caras para asegurar una visibilidad per
 Formatos a Elegir:
 Carpita Simple: Diseño clásico y elegante.
 Montado sobre Papel Kraft/Blanco: Para un estilo rústico (Kraft) o sobrio y moderno (Blanco).`,
-    coverImageUrl: "https://i.ibb.co/cS5b3QxZ/1762571037492.png",
+    coverImageUrl: "https://res.cloudinary.com/dw4k14vmn/image/upload/v1790959484/sucupam/drive-gallery/numeros/10hyK1Mm205qlvOQW9kOGC0XHHfrkN_b6.jpg",
     galleryImageUrls: [
         "https://res.cloudinary.com/dw4k14vmn/image/upload/v1790959484/sucupam/drive-gallery/numeros/10hyK1Mm205qlvOQW9kOGC0XHHfrkN_b6.jpg",
         "https://res.cloudinary.com/dw4k14vmn/image/upload/v1790959488/sucupam/drive-gallery/numeros/10gMamEOXIgfYyoJeye_gZTUHecW1ibKZ.jpg",
@@ -318,7 +318,7 @@ Tarjeta Personalizada: Con medidas óptimas para lucirse, se convierte en un rec
 Diseño 100% a Medida: Creamos el diseño perfecto para cumpleaños, casamientos, bautismos y cualquier tipo de evento.
 
 ¡Personalizá cada detalle y convertí tu evento en un momento inolvidable! Consultanos hoy para comenzar a diseñar.`,
-    coverImageUrl: "https://i.ibb.co/Z1xLdf4Y/5.jpg",
+    coverImageUrl: "https://res.cloudinary.com/dw4k14vmn/image/upload/v1790959403/sucupam/drive-gallery/chocolates/12IwmDsM3zHMXg2-sJj-coV-RdKpx9iAV.jpg",
     galleryImageUrls: [
         "https://res.cloudinary.com/dw4k14vmn/image/upload/v1790959403/sucupam/drive-gallery/chocolates/12IwmDsM3zHMXg2-sJj-coV-RdKpx9iAV.jpg",
         "https://res.cloudinary.com/dw4k14vmn/image/upload/v1790959407/sucupam/drive-gallery/chocolates/12Gn5kI2VuM7lVy_pYPn5aK8ztd8zP8Qz.jpg",
@@ -355,7 +355,7 @@ Información Adicional:
 El producto es de elaboración artesanal y por encargo. El tiempo de confección comienza a correr una vez definido y aprobado el diseño final.
 
 Política de Devolución: Al ser un artículo personalizado y hecho a medida, no se admiten devoluciones una vez que se ha iniciado el proceso de elaboración.`,
-    coverImageUrl: "https://i.ibb.co/9kPKh3pR/1761506119875.jpg",
+    coverImageUrl: "https://res.cloudinary.com/dw4k14vmn/image/upload/v1790959646/sucupam/drive-gallery/raspaditas/1NslQsNAUAVUKSl-YX1aGgJUHxwg6wZ5W.jpg",
     galleryImageUrls: [
         "https://res.cloudinary.com/dw4k14vmn/image/upload/v1790959646/sucupam/drive-gallery/raspaditas/1NslQsNAUAVUKSl-YX1aGgJUHxwg6wZ5W.jpg",
         "https://res.cloudinary.com/dw4k14vmn/image/upload/v1790959650/sucupam/drive-gallery/raspaditas/13YB_8qno6YkpBqVBE8YAwckzzCcwUTSQ.jpg",
