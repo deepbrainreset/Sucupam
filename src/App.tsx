@@ -169,12 +169,13 @@ export default function App() {
               element={
                 <CategoryLanding
                   slug="souvenirs-para-bodas"
-                  h1="Souvenirs para bodas en Argentina"
-                  title="Souvenirs para bodas personalizados en Argentina | Sucupam"
-                  description="Diseños artesanales para bodas elegantes: recuerdos personalizados con envío a toda Argentina."
+                  h1="Souvenirs para casamientos personalizados en Argentina"
+                  title="Souvenirs para casamientos personalizados | Sucupam"
+                  description="Souvenirs para casamientos personalizados en Buenos Aires y toda Argentina: mantas, abanicos, pañuelos, conos, tags y papelería para bodas."
                   heroImage="https://res.cloudinary.com/dyaun9c0q/image/upload/v1774488189/portada_mantas_mno1nu.webp"
                   intro={[
-                    "Creamos souvenirs para bodas con estética premium, diseño sensible y producción artesanal para celebrar historias de amor con identidad propia.",
+                    "Souvenirs para casamiento y bodas hechos a medida para celebraciones en Buenos Aires y toda Argentina, con opciones personalizadas de papelería y recuerdos para invitados.",
+                    "Encontrá mantas, abanicos, pañuelos para lágrimas de felicidad, conos, tags y otros souvenirs de casamiento coordinados con la estética de tu evento.",
                   ]}
                 />
               }
