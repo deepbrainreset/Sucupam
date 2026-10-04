@@ -13,7 +13,10 @@ export function ProductDetail() {
   const [isLightboxOpen, setIsLightboxOpen] = useState(false);
 
   const galleryImages = product
-    ? (product.galleryImageUrls.length > 0 ? product.galleryImageUrls : [product.coverImageUrl])
+    ? [
+        product.coverImageUrl,
+        ...product.galleryImageUrls.filter((url) => url !== product.coverImageUrl),
+      ]
     : [];
   const showPreviousImage = () => setSelectedImageIndex((i) => (i - 1 + galleryImages.length) % galleryImages.length);
   const showNextImage = () => setSelectedImageIndex((i) => (i + 1) % galleryImages.length);
