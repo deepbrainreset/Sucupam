@@ -185,11 +185,6 @@ Diseñados especialmente para vos, con colores, nombres y detalles a elección.
 Son prácticos, elegantes y una opción económica para sorprender a tus invitados con un recuerdo original y funcional.`,
     coverImageUrl: "https://i.ibb.co/RpdSL657/4.jpg",
     galleryImageUrls: [
-        "https://res.cloudinary.com/dw4k14vmn/image/upload/v1790959462/sucupam/drive-gallery/paletas/10Do_qdlUA9J2OB1wUoI2YSbHwxrAkVQ2.jpg",
-        "https://res.cloudinary.com/dw4k14vmn/image/upload/v1790959466/sucupam/drive-gallery/paletas/108LTngbZeW1Cn8Qi6V_BhQIiag_FJWMY.jpg",
-        "https://res.cloudinary.com/dw4k14vmn/image/upload/v1790959471/sucupam/drive-gallery/paletas/107qi4ZsGK9DIULEnoq28Y312trRtuM31.jpg",
-        "https://res.cloudinary.com/dw4k14vmn/image/upload/v1790959475/sucupam/drive-gallery/paletas/106J1rzYcUH3LHjuXjMDAiBEW1CU7VHap.jpg",
-        "https://res.cloudinary.com/dw4k14vmn/image/upload/v1790959479/sucupam/drive-gallery/paletas/10256pzulzG_403zZpGHQpW7zP4CUUo2n.jpg",
         "https://res.cloudinary.com/dw4k14vmn/image/upload/v1790959453/sucupam/drive-gallery/abanicos/10021Jwc3U0-cxANGIXFga_owAkbnrHYl.png",
         "https://res.cloudinary.com/dw4k14vmn/image/upload/v1790959458/sucupam/drive-gallery/abanicos/10-D50UtwoGRZsCZENUG4wRnVdxCPkNKU.jpg",
         "https://res.cloudinary.com/dw4k14vmn/image/upload/v1790959718/sucupam/drive-gallery/abanicos/10trpF10eLpGphZD45GiF0iMrBiy3cZuq.png"

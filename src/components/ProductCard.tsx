@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { ArrowRight, Eye, X, Sparkles, Heart, Palette, MessageCircle } from "lucide-react";
 import { Product } from "../data";
@@ -9,7 +9,7 @@ interface ProductCardProps {
 
 export function ProductCard({ product }: ProductCardProps) {
   const [isQuickViewOpen, setIsQuickViewOpen] = useState(false);
-  const [isHovered, setIsHovered] = useState(false);
+  const [isHovered, setIsHovered] = useState(false);\n  const imageCandidates = [product.coverImageUrl, ...product.galleryImageUrls].filter((url, index, urls) => url && urls.indexOf(url) === index);\n  const [imageIndex, setImageIndex] = useState(0);\n  const displayImage = imageCandidates[imageIndex] || "";\n\n  useEffect(() => setImageIndex(0), [product.slug]);\n\n  const handleImageError = () => {\n    setImageIndex((current) => Math.min(current + 1, imageCandidates.length - 1));\n  };
 
   // Determine personalization badges based on product characteristics
   const getBadges = (slug: string) => {
@@ -75,7 +75,7 @@ export function ProductCard({ product }: ProductCardProps) {
         {/* Image Frame */}
         <div className="block overflow-hidden relative aspect-[4/5] bg-brand-accent/10">
           <img
-            src={product.coverImageUrl}
+            src={displayImage}
             alt={product.name}
             className="w-full h-full object-cover transition-transform duration-[1200ms] cubic-bezier(0.16,1,0.3,1) group-hover:scale-118"
             loading="lazy"
@@ -185,7 +185,7 @@ export function ProductCard({ product }: ProductCardProps) {
               {/* Image Section */}
               <div className="relative aspect-square md:aspect-auto md:h-full min-h-[300px] bg-brand-accent/20">
                 <img
-                  src={product.coverImageUrl}
+                  src={displayImage}
                   alt={product.name}
                   className="w-full h-full object-cover"
                   referrerPolicy="no-referrer"

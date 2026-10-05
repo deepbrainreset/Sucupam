@@ -10,14 +10,23 @@ export function ProductDetail() {
   const { productSlug } = useParams<{ productSlug: string }>();
   const product = products.find((p) => p.slug === productSlug);
   const [selectedImageIndex, setSelectedImageIndex] = useState(0);
-  const [isLightboxOpen, setIsLightboxOpen] = useState(false);
+  const [isLightboxOpen, setIsLightboxOpen] = useState(false);\n  const [failedImageUrls, setFailedImageUrls] = useState<Set<string>>(new Set());
 
-  const galleryImages = product
+  const allGalleryImages = product
     ? [
         product.coverImageUrl,
         ...product.galleryImageUrls.filter((url) => url !== product.coverImageUrl),
       ]
     : [];
+  const galleryImages = allGalleryImages.filter((url) => url && !failedImageUrls.has(url));
+  const handleImageError = (url: string) => {
+    setFailedImageUrls((current) => {
+      if (current.has(url)) return current;
+      const next = new Set(current);
+      next.add(url);
+      return next;
+    });
+  };
   const showPreviousImage = () => setSelectedImageIndex((i) => (i - 1 + galleryImages.length) % galleryImages.length);
   const showNextImage = () => setSelectedImageIndex((i) => (i + 1) % galleryImages.length);
 
@@ -184,7 +193,7 @@ export function ProductDetail() {
             <div className="lg:col-span-6 space-y-4">
               <div className="relative rounded-[2.5rem] overflow-hidden border border-brand-accent/40 shadow-lg bg-white aspect-square">
                 <button type="button" onClick={() => setIsLightboxOpen(true)} className="absolute inset-0 z-0 h-full w-full cursor-zoom-in focus-visible:outline focus-visible:outline-4 focus-visible:outline-brand-primary" aria-label={`Ampliar imagen ${selectedImageIndex + 1} de ${galleryImages.length}: ${product.name}`}>
-                  <img src={galleryImages[selectedImageIndex]} alt={`${product.name}, imagen ${selectedImageIndex + 1} de ${galleryImages.length}`} className="w-full h-full object-cover" referrerPolicy="no-referrer" />
+                  <img src={galleryImages[selectedImageIndex]} alt={`${product.name}, imagen ${selectedImageIndex + 1} de ${galleryImages.length}`} className="w-full h-full object-cover" referrerPolicy="no-referrer" onError={() => handleImageError(galleryImages[selectedImageIndex])} />
                 </button>
                 {galleryImages.length > 1 && (
                   <>
@@ -202,7 +211,7 @@ export function ProductDetail() {
                 <div className="grid grid-cols-4 gap-3" aria-label="Elegí una imagen de la galería">
                   {galleryImages.map((url, i) => (
                     <button key={url} type="button" onClick={() => setSelectedImageIndex(i)} aria-label={`Ver imagen ${i + 1} de ${galleryImages.length}`} aria-pressed={selectedImageIndex === i} className={`aspect-square rounded-2xl overflow-hidden border bg-white shadow-sm transition-transform duration-300 hover:scale-105 focus-visible:outline focus-visible:outline-2 focus-visible:outline-brand-primary ${selectedImageIndex === i ? "border-brand-primary ring-2 ring-brand-primary/40" : "border-brand-accent"}`}>
-                      <img src={url} alt="" className="w-full h-full object-cover" loading="lazy" referrerPolicy="no-referrer" />
+                      <img src={url} alt="" className="w-full h-full object-cover" loading="lazy" referrerPolicy="no-referrer" onError={() => handleImageError(url)} />
                     </button>
                   ))}
                 </div>
@@ -210,7 +219,7 @@ export function ProductDetail() {
               {isLightboxOpen && (
                 <div className="fixed inset-0 z-[100] flex items-center justify-center bg-black/95 p-3 sm:p-8" role="dialog" aria-modal="true" aria-label={`Galería de ${product.name}`} onClick={() => setIsLightboxOpen(false)}>
                   <button type="button" onClick={() => setIsLightboxOpen(false)} className="absolute right-4 top-4 z-20 rounded-full bg-white/15 p-3 text-white hover:bg-white/25 focus-visible:outline focus-visible:outline-2 focus-visible:outline-white" aria-label="Cerrar imagen ampliada"><X className="h-6 w-6" /></button>
-                  <img src={galleryImages[selectedImageIndex]} alt={`${product.name}, imagen ${selectedImageIndex + 1} de ${galleryImages.length}`} className="max-h-[88vh] max-w-[92vw] select-none object-contain" onClick={(event) => event.stopPropagation()} referrerPolicy="no-referrer" />
+                  <img src={galleryImages[selectedImageIndex]} alt={`${product.name}, imagen ${selectedImageIndex + 1} de ${galleryImages.length}`} className="max-h-[88vh] max-w-[92vw] select-none object-contain" onClick={(event) => event.stopPropagation()} referrerPolicy="no-referrer" onError={() => handleImageError(galleryImages[selectedImageIndex])} />
                   {galleryImages.length > 1 && (
                     <>
                       <button type="button" onClick={(event) => { event.stopPropagation(); showPreviousImage(); }} className="absolute left-2 sm:left-6 top-1/2 -translate-y-1/2 rounded-full bg-white/15 p-3 text-white hover:bg-white/25 focus-visible:outline focus-visible:outline-2 focus-visible:outline-white" aria-label="Ver imagen anterior"><ChevronLeft className="h-7 w-7" /></button>
