@@ -33,7 +33,9 @@ try {
     html = html.replace(/<link rel="canonical" href="[^"]*"\s*\/?>/, `<link rel="canonical" href="${url}" />`);
     const jsonLd = Object.entries(schemas).map(([type, data]) => `<script id="schema-${type.toLowerCase()}" type="application/ld+json">${JSON.stringify({ '@context': 'https://schema.org', '@type': type, ...data }).replaceAll('<', '\\u003c')}</script>`).join('\n');
     html = html.replace('</head>', `${jsonLd}\n</head>`);
-    const file = resolve('dist', `.${path}`, 'index.html');
+    // Cloudflare Pages serves .html files at extensionless URLs without adding a slash.
+    await rm(resolve('dist', `.${path}`, 'index.html'), { force: true });
+    const file = resolve('dist', `.${path}.html`);
     await mkdir(dirname(file), { recursive: true });
     await writeFile(file, html);
     console.log(`Prerendered ${path}`);
