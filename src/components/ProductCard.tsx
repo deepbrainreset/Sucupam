@@ -9,7 +9,16 @@ interface ProductCardProps {
 
 export function ProductCard({ product }: ProductCardProps) {
   const [isQuickViewOpen, setIsQuickViewOpen] = useState(false);
-  const [isHovered, setIsHovered] = useState(false);\n  const imageCandidates = [product.coverImageUrl, ...product.galleryImageUrls].filter((url, index, urls) => url && urls.indexOf(url) === index);\n  const [imageIndex, setImageIndex] = useState(0);\n  const displayImage = imageCandidates[imageIndex] || "";\n\n  useEffect(() => setImageIndex(0), [product.slug]);\n\n  const handleImageError = () => {\n    setImageIndex((current) => Math.min(current + 1, imageCandidates.length - 1));\n  };
+  const [isHovered, setIsHovered] = useState(false);
+  const imageCandidates = [product.coverImageUrl, ...product.galleryImageUrls].filter((url, index, urls) => url && urls.indexOf(url) === index);
+  const [imageIndex, setImageIndex] = useState(0);
+  const displayImage = imageCandidates[imageIndex] || "";
+
+  useEffect(() => setImageIndex(0), [product.slug]);
+
+  const handleImageError = () => {
+    setImageIndex((current) => Math.min(current + 1, imageCandidates.length - 1));
+  };
 
   // Determine personalization badges based on product characteristics
   const getBadges = (slug: string) => {
@@ -77,9 +86,10 @@ export function ProductCard({ product }: ProductCardProps) {
           <img
             src={displayImage}
             alt={product.name}
-            className="w-full h-full object-cover transition-transform duration-[1200ms] cubic-bezier(0.16,1,0.3,1) group-hover:scale-118"
+            className="w-full h-full object-contain p-2"
             loading="lazy"
             referrerPolicy="no-referrer"
+            onError={handleImageError}
           />
           {/* Top category pill */}
           <div className="absolute top-4 left-4 z-10">
@@ -187,8 +197,9 @@ export function ProductCard({ product }: ProductCardProps) {
                 <img
                   src={displayImage}
                   alt={product.name}
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-contain"
                   referrerPolicy="no-referrer"
+                  onError={handleImageError}
                 />
                 <div className="absolute top-4 left-4 bg-white/90 backdrop-blur-sm px-4 py-1.5 rounded-full border border-brand-primary/20 shadow-sm">
                   <span className="text-[11px] font-sans tracking-widest font-bold text-brand-dark uppercase">

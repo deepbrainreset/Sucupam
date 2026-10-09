@@ -45,7 +45,7 @@ export function SEO({ title, description, path, keywords = [], image }: SEOProps
     linkCanonical.setAttribute("href", canonicalURL);
 
     // Default image if not provided
-    const ogImage = image || "https://res.cloudinary.com/dyaun9c0q/image/upload/v1774488189/portada_mantas_mno1nu.webp";
+    const ogImage = image ? new URL(image, "https://sucupam.com").href : "https://res.cloudinary.com/dyaun9c0q/image/upload/v1774488189/portada_mantas_mno1nu.webp";
 
     // Set Open Graph & Twitter tags
     const metaTags = [
