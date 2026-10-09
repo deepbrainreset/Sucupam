@@ -27,9 +27,9 @@ function ScrollToTop() {
   return null;
 }
 
-export default function App() {
+export function AppContent() {
   return (
-    <BrowserRouter>
+    <>
       {/* Restores scroll on navigation */}
       <ScrollToTop />
 
@@ -414,6 +414,10 @@ export default function App() {
         {/* Flying CTA badge */}
         <WhatsAppWidget />
       </div>
-    </BrowserRouter>
+    </>
   );
+}
+
+export default function App() {
+  return <BrowserRouter><AppContent /></BrowserRouter>;
 }

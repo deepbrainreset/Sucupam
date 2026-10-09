@@ -71,7 +71,7 @@
     margin-bottom: 1.5rem;
     border-bottom: 1px solid #f3f4f6; /* gray-100 */
     padding-bottom: 0.5rem;
-    text-transform: capitalize;
+    text-transform: none;
   }
   .prose h3 {
     font-size: 1.25rem; /* text-xl */
@@ -80,6 +80,12 @@
     margin-top: 2rem;
     margin-bottom: 1rem;
   }
+  .prose ul, .prose ol { margin-bottom: 1.5rem; padding-left: 1.5rem; }
+  .prose ul { list-style: disc; }
+  .prose ol { list-style: decimal; }
+  .prose li { margin-bottom: 0.75rem; }
+  .prose a { color: var(--color-brand-dark); text-decoration: underline; text-underline-offset: 3px; }
+  .prose a:hover { color: var(--color-brand-ink); }
   .prose strong {
     color: var(--color-brand-ink);
     font-weight: 600;

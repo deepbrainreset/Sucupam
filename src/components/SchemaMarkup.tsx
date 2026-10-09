@@ -1,4 +1,5 @@
-import { useEffect } from "react";
+import { useContext, useEffect } from "react";
+import { PageMetadataContext } from "../pageMetadata";
 
 interface SchemaMarkupProps {
   type: string;
@@ -6,6 +7,9 @@ interface SchemaMarkupProps {
 }
 
 export function SchemaMarkup({ type, data }: SchemaMarkupProps) {
+  const metadata = useContext(PageMetadataContext);
+  if (metadata) metadata.schemas[type] = data;
+
   useEffect(() => {
     // Check if script already exists for this schema type to avoid duplication
     const scriptId = `schema-${type.toLowerCase()}`;

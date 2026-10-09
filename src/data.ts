@@ -1,3 +1,5 @@
+import { fanGuide } from './fanGuide';
+
 /**
  * Core Data backup of Sucupam.
  * Recovered from original production build assets.
@@ -42,6 +44,8 @@ export interface BlogPost {
   };
   category: string;
   coverImage: string;
+  coverAlt?: string;
+  relatedProductSlugs?: string[];
   metaTitle: string;
   metaDescription: string;
   keywords?: string[];
@@ -370,6 +374,7 @@ Política de Devolución: Al ser un artículo personalizado y hecho a medida, no
 ];
 
 export const blogPosts: BlogPost[] = [
+  fanGuide,
   {
     id: "guia-souvenirs-boda",
     slug: "guia-souvenirs-boda",

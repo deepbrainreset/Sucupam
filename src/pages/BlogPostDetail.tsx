@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useParams, Link } from "react-router-dom";
 import ReactMarkdown from "react-markdown";
-import { Calendar, User, ChevronDown, ChevronUp, Sparkles, ShoppingBag, ArrowRight } from "lucide-react";
+import { Calendar, User, ChevronDown, ChevronUp, Sparkles } from "lucide-react";
 import { motion, AnimatePresence } from "motion/react";
 import { SEO } from "../components/SEO";
 import { SchemaMarkup } from "../components/SchemaMarkup";
@@ -31,7 +31,7 @@ export function BlogPostDetail() {
     );
   }
 
-  // Determine which premium catalog products relate to this article to satisfy "Blog -> Catalog" rule
+  // Explicit article associations take precedence over existing category defaults.
   const getRelatedProducts = (slug: string) => {
     if (slug === "guia-souvenirs-boda") {
       return products.filter((p) =>
@@ -45,7 +45,11 @@ export function BlogPostDetail() {
     }
   };
 
-  const relatedProducts = getRelatedProducts(post.slug);
+  const relatedProducts = post.relatedProductSlugs
+    ? products.filter((product) => post.relatedProductSlugs!.includes(product.slug))
+    : getRelatedProducts(post.slug);
+  const headingId = (text: string) => text.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "").replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
+  const headings = Array.from(post.content.matchAll(/^## (.+)$/gm), (match) => match[1]);
   const faqs = post.faqs || [];
 
   return (
@@ -56,6 +60,7 @@ export function BlogPostDetail() {
         path={`/blog/${post.slug}`}
         keywords={post.keywords}
         image={post.coverImage}
+        type="article"
       />
       <SchemaMarkup
         type="BlogPosting"
@@ -63,13 +68,23 @@ export function BlogPostDetail() {
           headline: post.title,
           description: post.excerpt,
           image: post.coverImage,
-          datePublished: post.date,
+          datePublished: `${post.date}T12:00:00-03:00`,
+          dateModified: `${post.date}T12:00:00-03:00`,
+          inLanguage: "es-AR",
+          mainEntityOfPage: `https://sucupam.com/blog/${post.slug}`,
+          publisher: { "@type": "Organization", name: "Sucupam", url: "https://sucupam.com" },
           author: {
-            "@type": "Person",
+            "@type": "Organization",
             name: post.author.name,
+            url: "https://sucupam.com/contacto",
           },
         }}
       />
+      <SchemaMarkup type="BreadcrumbList" data={{ itemListElement: [
+        { "@type": "ListItem", position: 1, name: "Inicio", item: "https://sucupam.com" },
+        { "@type": "ListItem", position: 2, name: "Blog", item: "https://sucupam.com/blog" },
+        { "@type": "ListItem", position: 3, name: post.title, item: `https://sucupam.com/blog/${post.slug}` },
+      ] }} />
       {faqs.length > 0 && (
         <SchemaMarkup
           type="FAQPage"
@@ -107,7 +122,7 @@ export function BlogPostDetail() {
             <div className="flex flex-wrap items-center justify-center md:justify-start gap-6 text-[10px] uppercase tracking-wider font-bold text-brand-ink/90 font-sans">
               <span className="flex items-center">
                 <Calendar className="w-4 h-4 mr-1.5 text-brand-primary" />
-                {new Date(post.date).toLocaleDateString("es-AR")}
+                <time dateTime={post.date}>{new Date(post.date).toLocaleDateString("es-AR", { timeZone: "UTC" })}</time>
               </span>
               <span className="flex items-center">
                 <User className="w-4 h-4 mr-1.5 text-brand-secondary" />
@@ -116,22 +131,35 @@ export function BlogPostDetail() {
             </div>
           </header>
 
+          <p className="mb-6 text-sm text-brand-ink">{post.author.role}</p>
+
           {/* Banner cover image with rounded contours */}
-          <div className="w-full aspect-[21/9] max-h-[420px] rounded-[2rem] overflow-hidden border border-brand-accent/40 shadow-md mb-12">
+          <div className="w-full aspect-[4/3] max-h-[480px] bg-brand-accent/20 rounded-[2rem] overflow-hidden border border-brand-accent/40 shadow-md mb-12">
             <img
               src={post.coverImage}
-              alt={post.title}
-              className="w-full h-full object-cover"
+              alt={post.coverAlt || post.title}
+              className="w-full h-full object-contain"
               referrerPolicy="no-referrer"
             />
           </div>
 
+          {headings.length > 0 && (
+            <nav aria-label="En esta guía" className="mb-10 rounded-2xl border border-brand-accent p-6">
+              <h2 className="mb-4 font-serif text-2xl">En esta guía</h2>
+              <ol className="list-decimal space-y-2 pl-5 text-sm leading-relaxed">
+                {headings.map((heading) => <li key={heading}><a href={`#${headingId(heading)}`} className="underline underline-offset-4">{heading}</a></li>)}
+              </ol>
+            </nav>
+          )}
+
           {/* Main content body */}
-          <div className="prose prose-sm md:prose-base leading-relaxed text-brand-ink/90 font-sans mb-16 text-justify">
-            <ReactMarkdown>{post.content}</ReactMarkdown>
+          <div className="prose prose-sm md:prose-base leading-relaxed text-brand-ink/90 font-sans mb-16 text-left">
+            <ReactMarkdown components={{
+              h2: ({ children }) => <h2 id={headingId(String(children))} className="scroll-mt-28">{children}</h2>,
+            }}>{post.content}</ReactMarkdown>
           </div>
 
-          {/* MANDATORY RELATED PRODUCTS SECTION: BLOG -> CATALOG (PRODUCTS MUST NOT displays blogs back) */}
+          {/* Related catalog options for the article */}
           {relatedProducts.length > 0 && (
             <section className="py-12 px-6 md:px-10 rounded-[2.5rem] bg-brand-accent/30 border border-brand-accent/50 mb-16 animate-fadeIn">
               <div className="text-center md:text-left mb-8">
@@ -150,7 +178,7 @@ export function BlogPostDetail() {
               </div>
 
               {/* Related product cards grid format */}
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+              <div className={`grid grid-cols-1 ${relatedProducts.length === 2 ? "md:grid-cols-2" : "md:grid-cols-3"} gap-6`}>
                 {relatedProducts.map((prod) => (
                   <div
                     key={prod.id}
@@ -161,7 +189,7 @@ export function BlogPostDetail() {
                       <img
                         src={prod.coverImageUrl}
                         alt={prod.name}
-                        className="w-full h-full object-cover"
+                        className="w-full h-full object-contain"
                         referrerPolicy="no-referrer"
                       />
                       <div className="absolute top-2 left-2 bg-white/95 text-[9px] font-sans font-bold uppercase tracking-widest px-2.5 py-0.5 rounded-full border border-brand-accent">

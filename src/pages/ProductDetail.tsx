@@ -1,3 +1,4 @@
+import { FanGuideLink } from "../components/FanGuideLink";
 import { useParams, Link } from "react-router-dom";
 import { ArrowLeft, MessageCircle, Sparkles, ShieldCheck, Heart, Send } from "lucide-react";
 import { SEO } from "../components/SEO";
@@ -145,6 +146,8 @@ export function ProductDetail() {
             <ArrowLeft className="w-4 h-4 mr-2" />
             Volver al catálogo general
           </Link>
+
+          {["abanicos-personalizados", "abanicos-paleta-personalizado"].includes(product.slug) && <FanGuideLink />}
 
           {/* Core Info Display Grid */}
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">

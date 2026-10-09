@@ -1,3 +1,4 @@
+import { FanGuideLink } from "../components/FanGuideLink";
 import { Link } from "react-router-dom";
 import { SEO } from "../components/SEO";
 import { SchemaMarkup } from "../components/SchemaMarkup";
@@ -141,6 +142,8 @@ export function SeoLanding({
               <p key={index}>{paragraph}</p>
             ))}
           </article>
+
+          {canonicalPath === "/abanicos-personalizados" && <FanGuideLink />}
 
           {featuredProducts.length > 0 && (
             <section className="mb-16 border-t border-brand-accent/25 pt-10" aria-labelledby="productos-destacados">

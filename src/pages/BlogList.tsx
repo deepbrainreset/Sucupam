@@ -40,8 +40,8 @@ function BlogPostCard({ post }: BlogPostCardProps) {
       <Link to={`/blog/${post.slug}`} className="block overflow-hidden relative aspect-[16/10]">
         <img
           src={post.coverImage}
-          alt={post.title}
-          className="w-full h-full object-cover transition-transform duration-[1200ms] cubic-bezier(0.16,1,0.3,1) group-hover:scale-118"
+          alt={post.coverAlt || post.title}
+          className="w-full h-full object-contain bg-brand-accent/20 transition-transform duration-[1200ms] cubic-bezier(0.16,1,0.3,1)"
           loading="lazy"
           referrerPolicy="no-referrer"
         />
@@ -53,7 +53,7 @@ function BlogPostCard({ post }: BlogPostCardProps) {
           <span className="text-brand-gold font-bold">{post.category}</span>
           <span className="flex items-center">
             <Calendar className="w-3.5 h-3.5 mr-1" />
-            {new Date(post.date).toLocaleDateString("es-AR")}
+            <time dateTime={post.date}>{new Date(post.date).toLocaleDateString("es-AR", { timeZone: "UTC" })}</time>
           </span>
         </div>
 

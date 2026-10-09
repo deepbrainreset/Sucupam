@@ -1,14 +1,9 @@
-import { useEffect } from "react";
+import { useContext, useEffect } from "react";
+import { PageMetadataContext, type PageSEO } from "../pageMetadata";
 
-interface SEOProps {
-  title: string;
-  description: string;
-  path: string;
-  keywords?: string[];
-  image?: string;
-}
-
-export function SEO({ title, description, path, keywords = [], image }: SEOProps) {
+export function SEO({ title, description, path, keywords = [], image, type = "website" }: PageSEO) {
+  const metadata = useContext(PageMetadataContext);
+  if (metadata) metadata.seo = { title, description, path, keywords, image, type };
   useEffect(() => {
     // Set document title
     document.title = title;
@@ -49,7 +44,7 @@ export function SEO({ title, description, path, keywords = [], image }: SEOProps
 
     // Set Open Graph & Twitter tags
     const metaTags = [
-      { property: "og:type", content: "website" },
+      { property: "og:type", content: type },
       { property: "og:site_name", content: "Sucupam" },
       { property: "og:locale", content: "es_AR" },
       { property: "og:title", content: title },
@@ -75,7 +70,7 @@ export function SEO({ title, description, path, keywords = [], image }: SEOProps
       element.setAttribute("content", tag.content);
     });
 
-  }, [title, description, path, keywords, image]);
+  }, [title, description, path, keywords, image, type]);
 
   return null;
 }
