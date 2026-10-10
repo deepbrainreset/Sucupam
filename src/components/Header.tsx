@@ -9,6 +9,7 @@ export function Header() {
     { name: "Catálogo", href: "/souvenirs" },
     { name: "Casamientos", href: "/souvenirs-casamientos" },
     { name: "15 Años", href: "/souvenirs-xv-anos" },
+    { name: "Abanicos personalizados", href: "/abanicos-personalizados" },
     { name: "Blog", href: "/blog" }
   ];
 
