@@ -220,7 +220,7 @@ export function AppContent() {
                 <SeoLanding
                   path="/abanicos-personalizados"
                   h1="Abanicos personalizados para souvenirs y eventos"
-                  title="Abanicos personalizados souvenir para eventos | Sucupam"
+                  title="Abanicos personalizados"
                   description="Abanicos personalizados souvenir y abanicos souvenir personalizados para bodas, cumpleaños y 15 años. Diseños de papel y tipo paleta a medida en Argentina."
                   heroImage="https://i.ibb.co/NnJdmmKq/1762114158184.jpg"
                   intro="Abanicos personalizados para souvenirs: modelos de papel y tipo paleta con diseño a medida para casamientos, cumpleaños, fiestas de 15 y eventos corporativos."
