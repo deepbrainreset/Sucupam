@@ -219,15 +219,16 @@ export function AppContent() {
               element={
                 <SeoLanding
                   path="/abanicos-personalizados"
-                  h1="Abanicos personalizados de papel para eventos"
-                  title="Abanicos personalizados de papel para eventos | Sucupam"
-                  description="Abanicos personalizados de papel para casamientos, cumpleaños, 15 años y eventos corporativos. Diseños a medida para tu celebración."
+                  h1="Abanicos personalizados para souvenirs y eventos"
+                  title="Abanicos personalizados souvenir para eventos | Sucupam"
+                  description="Abanicos personalizados souvenir y abanicos souvenir personalizados para bodas, cumpleaños y 15 años. Diseños de papel y tipo paleta a medida en Argentina."
                   heroImage="https://i.ibb.co/NnJdmmKq/1762114158184.jpg"
-                  intro="Abanicos de papel personalizados y abanicos tipo paleta para celebraciones sociales y empresariales, con diseño adaptado a la identidad visual del evento."
+                  intro="Abanicos personalizados para souvenirs: modelos de papel y tipo paleta con diseño a medida para casamientos, cumpleaños, fiestas de 15 y eventos corporativos."
                   paragraphs={[
                     "Los abanicos personalizados de papel son un souvenir funcional para celebraciones en días cálidos y eventos al aire libre. En Sucupam se personalizan con nombres, fechas, colores, textos y detalles visuales elegidos para cada ocasión.",
                     "La colección incluye abanicos de papel de alto gramaje y abanicos tipo paleta con mango de madera. Pueden utilizarse en casamientos, cumpleaños, fiestas de 15, comuniones y eventos empresariales, manteniendo una estética coordinada con la papelería y la ambientación.",
                     "Además de servir como recuerdo, los abanicos pueden incorporar información útil del evento, mensajes de agradecimiento o piezas gráficas que refuercen la identidad de la celebración.",
+                    "Si buscás abanicos personalizados souvenir, abanicos souvenir personalizados o simplemente abanicos personalizados, podés elegir el formato y coordinar nombres, fecha, colores y diseño con la temática de tu celebración. Consultanos por cantidades, opciones y tiempos de preparación.",
                   ]}
                   faqs={[
                     {
@@ -246,6 +247,8 @@ export function AppContent() {
                   productSlugs={["abanicos-personalizados", "abanicos-paleta-personalizado"]}
                   keywords={[
                     "abanicos personalizados",
+                    "abanicos personalizados souvenir",
+                    "abanicos souvenir personalizados",
                     "abanicos personalizados de papel",
                     "abanicos de papel personalizados",
                     "abanicos para eventos",
