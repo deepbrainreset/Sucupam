@@ -44,7 +44,7 @@ export function Header() {
     <header className="sticky top-0 z-50 bg-brand-paper/90 backdrop-blur-md border-b border-brand-accent/20">
       <div className="container mx-auto px-6">
         {/* Desktop Header */}
-        <div className="hidden md:flex justify-between items-center h-20">
+        <div className="hidden xl:flex justify-between items-center h-20">
           <div className="flex-shrink-0">
             <Link to="/" className="flex items-center group">
               <img
@@ -58,7 +58,7 @@ export function Header() {
             </Link>
           </div>
 
-          <nav className="flex items-center justify-center space-x-12 px-4">
+          <nav className="flex items-center justify-center space-x-6 px-4">
             {menuItems.map((item) => (
               <Link
                 key={item.name}
@@ -92,7 +92,7 @@ export function Header() {
         </div>
 
         {/* Mobile Header Bar */}
-        <div className="md:hidden flex justify-between items-center h-20">
+        <div className="xl:hidden flex justify-between items-center h-20">
           <div className="flex items-center">
             <Link to="/" className="flex items-center">
               <img
@@ -121,7 +121,7 @@ export function Header() {
 
       {/* Mobile Menu Overlay */}
       {mobileOpen && (
-        <div className="md:hidden fixed inset-0 bg-brand-paper z-40 px-6 pt-24 animate-fadeIn">
+        <div className="xl:hidden fixed inset-0 bg-brand-paper z-40 px-6 pt-24 animate-fadeIn">
           <nav className="flex flex-col space-y-6">
             {menuItems.map((item) => (
               <Link
