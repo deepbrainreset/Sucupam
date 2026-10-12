@@ -71,7 +71,7 @@ export function CategoryLanding({
     { href: "/souvenirs-baby-shower", label: "Baby Shower" },
     { href: "/souvenirs-xv-anos", label: "XV Años" },
     { href: "/souvenirs-eventos-corporativos", label: "Eventos Corporativos" },
-    { href: "/abanicos-personalizados", label: "Abanicos" },
+    { href: "/abanicos-personalizados", label: "Abanicos personalizados" },
     { href: "/papeleria-personalizada", label: "Papelería Fina" },
   ].filter((link) => link.href !== path);
 
