@@ -219,7 +219,7 @@ export function AppContent() {
               element={
                 <SeoLanding
                   path="/abanicos-personalizados"
-                  h1="Abanicos personalizados para souvenirs y eventos"
+                  h1="Abanicos personalizados"
                   title="Abanicos personalizados"
                   description="Abanicos personalizados souvenir y abanicos souvenir personalizados para bodas, cumpleaños y 15 años. Diseños de papel y tipo paleta a medida en Argentina."
                   heroImage="https://i.ibb.co/NnJdmmKq/1762114158184.jpg"
@@ -242,6 +242,10 @@ export function AppContent() {
                     {
                       q: "¿Sirven para cumpleaños, 15 años y eventos corporativos?",
                       a: "Sí. Son una opción versátil para bodas, cumpleaños, fiestas de 15, comuniones y celebraciones empresariales.",
+                    },
+                    {
+                      q: "¿Cómo pedir abanicos personalizados para souvenirs?",
+                      a: "Podés consultar por WhatsApp indicando el tipo de evento, la fecha, la cantidad aproximada y la idea de diseño. Sucupam te confirma las opciones disponibles y las condiciones del pedido.",
                     },
                   ]}
                   productSlugs={["abanicos-personalizados", "abanicos-paleta-personalizado"]}
