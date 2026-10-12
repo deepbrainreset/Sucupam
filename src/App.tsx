@@ -175,7 +175,7 @@ export function AppContent() {
                   heroImage="https://res.cloudinary.com/dyaun9c0q/image/upload/v1774488189/portada_mantas_mno1nu.webp"
                   intro={[
                     "Souvenirs para casamiento y bodas hechos a medida para celebraciones en Buenos Aires y toda Argentina, con opciones personalizadas de papelería y recuerdos para invitados.",
-                    "Encontrá mantas, abanicos, pañuelos para lágrimas de felicidad, conos, tags y otros souvenirs de casamiento coordinados con la estética de tu evento.",
+                    "Encontrá mantas, pañuelos para lágrimas de felicidad, conos, tags y otros souvenirs de casamiento coordinados con la estética de tu evento. Si buscás abanicos, consultá nuestra sección específica de abanicos personalizados.",
                   ]}
                 />
               }
