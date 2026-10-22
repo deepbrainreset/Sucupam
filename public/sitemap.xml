@@ -2,140 +2,188 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://sucupam.com/</loc>
-    <lastmod>2026-06-01</lastmod>
+    <lastmod>2026-10-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>https://sucupam.com/souvenirs</loc>
-    <lastmod>2026-06-01</lastmod>
+    <lastmod>2026-10-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
+    <loc>https://sucupam.com/souvenirs-para-bodas</loc>
+    <lastmod>2026-10-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
     <loc>https://sucupam.com/souvenirs-casamientos</loc>
-    <lastmod>2026-06-01</lastmod>
+    <lastmod>2026-10-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://sucupam.com/souvenirs-cumpleanos</loc>
-    <lastmod>2026-10-03</lastmod>
+    <lastmod>2026-10-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://sucupam.com/souvenirs-bautismos</loc>
-    <lastmod>2026-06-01</lastmod>
+    <lastmod>2026-10-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://sucupam.com/souvenirs-baby-shower</loc>
-    <lastmod>2026-06-01</lastmod>
+    <lastmod>2026-10-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://sucupam.com/souvenirs-xv-anos</loc>
-    <lastmod>2026-10-03</lastmod>
+    <lastmod>2026-10-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://sucupam.com/souvenirs-eventos-corporativos</loc>
-    <lastmod>2026-10-03</lastmod>
+    <lastmod>2026-10-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://sucupam.com/souvenirs-bodas</loc>
-    <lastmod>2026-06-01</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://sucupam.com/souvenirs-para-bodas</loc>
-    <lastmod>2026-06-01</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
     <loc>https://sucupam.com/souvenirs-15-anos</loc>
-    <lastmod>2026-06-01</lastmod>
+    <lastmod>2026-10-21</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://sucupam.com/souvenirs-corporativos</loc>
-    <lastmod>2026-06-01</lastmod>
+    <lastmod>2026-10-21</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://sucupam.com/abanicos-personalizados</loc>
-    <lastmod>2026-10-12</lastmod>
+    <lastmod>2026-10-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://sucupam.com/panuelos-descartables-personalizados</loc>
-    <lastmod>2026-10-03</lastmod>
+    <lastmod>2026-10-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://sucupam.com/tarjetas-raspaditas-personalizadas</loc>
-    <lastmod>2026-10-03</lastmod>
+    <lastmod>2026-10-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://sucupam.com/mantas-personalizadas-eventos</loc>
-    <lastmod>2026-10-03</lastmod>
+    <lastmod>2026-10-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://sucupam.com/papeleria-personalizada</loc>
-    <lastmod>2026-06-01</lastmod>
+    <lastmod>2026-10-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://sucupam.com/producto/mantas-para-eventos-personalizadas</loc>
+    <lastmod>2026-10-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://sucupam.com/producto/valijitas-personalizadas</loc>
+    <lastmod>2026-10-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://sucupam.com/producto/conos-para-arroz-confeti-petalos</loc>
+    <lastmod>2026-10-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://sucupam.com/producto/abanicos-personalizados</loc>
+    <lastmod>2026-10-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://sucupam.com/producto/abanicos-paleta-personalizado</loc>
+    <lastmod>2026-10-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://sucupam.com/producto/numeros-de-mesa-personalizados</loc>
+    <lastmod>2026-10-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://sucupam.com/producto/panuelos-para-lagrimas-de-felicidad</loc>
+    <lastmod>2026-10-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://sucupam.com/producto/tags-tarjetitas</loc>
+    <lastmod>2026-10-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://sucupam.com/producto/tarjetas-personalizadas-con-chocolatin</loc>
+    <lastmod>2026-10-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://sucupam.com/producto/tarjetas-raspaditas-personalizadas</loc>
+    <lastmod>2026-10-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://sucupam.com/blog</loc>
-    <lastmod>2026-10-09</lastmod>
+    <lastmod>2026-10-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://sucupam.com/blog/como-elegir-abanicos-personalizados</loc>
+    <lastmod>2026-10-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://sucupam.com/blog/guia-souvenirs-boda</loc>
-    <lastmod>2026-06-01</lastmod>
+    <lastmod>2026-10-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://sucupam.com/blog/ideas-souvenirs-15-anos</loc>
-    <lastmod>2026-06-01</lastmod>
+    <lastmod>2026-10-21</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>https://sucupam.com/contacto</loc>
-    <lastmod>2026-06-01</lastmod>
+    <lastmod>2026-10-21</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://sucupam.com/blog/como-elegir-abanicos-personalizados</loc>
-    <lastmod>2026-10-09</lastmod>
-  </url>
-  <url>
-    <loc>https://sucupam.com/producto/abanicos-personalizados</loc>
-    <lastmod>2026-10-09</lastmod>
-  </url>
-  <url>
-    <loc>https://sucupam.com/producto/abanicos-paleta-personalizado</loc>
-    <lastmod>2026-10-09</lastmod>
   </url>
 </urlset>

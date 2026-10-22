@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import { BrowserRouter, Routes, Route, useLocation } from "react-router-dom";
+import { BrowserRouter, Routes, Route, Navigate, useLocation } from "react-router-dom";
 import { Header } from "./components/Header";
 import { Footer } from "./components/Footer";
 import { WhatsAppWidget } from "./components/WhatsAppWidget";
@@ -15,6 +15,7 @@ import { BlogList } from "./pages/BlogList";
 import { BlogPostDetail } from "./pages/BlogPostDetail";
 import { Prensa } from "./pages/Prensa";
 import { Contacto } from "./pages/Contacto";
+import { NotFound } from "./pages/NotFound";
 
 // Scroll to Top Hook for SPA page transitions
 function ScrollToTop() {
@@ -148,21 +149,13 @@ export function AppContent() {
               }
             />
 
-            <Route
-              path="/souvenirs-bodas"
-              element={
-                <CategoryLanding
-                  slug="souvenirs-para-bodas"
-                  h1="Souvenirs para bodas en Argentina"
-                  title="Souvenirs para bodas personalizados en Argentina | Sucupam"
-                  description="Diseños artesanales para bodas elegantes: recuerdos personalizados con envío a toda Argentina."
-                  heroImage="https://res.cloudinary.com/dyaun9c0q/image/upload/v1774488189/portada_mantas_mno1nu.webp"
-                  intro={[
-                    "Creamos souvenirs para bodas con estética premium, diseño sensible y producción artesanal para celebrar historias de amor con identidad propia.",
-                  ]}
-                />
-              }
-            />
+            {/* Legacy & Duplicate Route Redirects */}
+            <Route path="/sucupam" element={<Navigate to="/" replace />} />
+            <Route path="/sucupam.com/souvenirs-para-bodas" element={<Navigate to="/souvenirs-para-bodas" replace />} />
+            <Route path="/souvenirs-for-bodas" element={<Navigate to="/souvenirs-para-bodas" replace />} />
+            <Route path="/souvenirs-de-bodas" element={<Navigate to="/souvenirs-para-bodas" replace />} />
+            <Route path="/souvenirs-bodas" element={<Navigate to="/souvenirs-para-bodas" replace />} />
+            <Route path="/souvenirs-boda" element={<Navigate to="/souvenirs-para-bodas" replace />} />
 
             <Route
               path="/souvenirs-para-bodas"
@@ -410,8 +403,9 @@ export function AppContent() {
             <Route path="/prensa" element={<Prensa />} />
             <Route path="/contacto" element={<Contacto />} />
 
-            {/* Sitemaps wildcard fallback */}
-            <Route path="*" element={<Home />} />
+            {/* 404 Not Found fallback (prevents Soft 404s) */}
+            <Route path="/404" element={<NotFound />} />
+            <Route path="*" element={<NotFound />} />
           </Routes>
         </div>
 

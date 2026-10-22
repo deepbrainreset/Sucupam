@@ -99,6 +99,26 @@ export function SeoLanding({
       )}
 
       <SchemaMarkup
+        type="Product"
+        data={{
+          name: h1,
+          description: description,
+          image: new URL(heroImage, "https://sucupam.com").href,
+          brand: {
+            "@type": "Brand",
+            name: "Sucupam",
+          },
+          offers: {
+            "@type": "Offer",
+            priceCurrency: "ARS",
+            price: featuredProducts[0]?.schemaPrice || "1500",
+            availability: "https://schema.org/InStock",
+            url: `https://sucupam.com${canonicalPath}`,
+          },
+        }}
+      />
+
+      <SchemaMarkup
         type="FAQPage"
         data={{
           mainEntity: faqs.map((faq) => ({

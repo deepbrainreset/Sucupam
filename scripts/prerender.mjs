@@ -18,26 +18,45 @@ try {
     // Replace the homepage fallback with the actual route, using the same React components.
     let html = template.slice(0, rootStart) + `<div id="root">${body}</div>` + template.slice(rootEnd + 6);
     html = html.replace(/<script type="application\/ld\+json">[\s\S]*?<\/script>/g, '');
-    html = html.replace(/<title>[\s\S]*?<\/title>/, `<title>${escape(seo.title)}</title>`);
-    const url = `https://sucupam.com${path}`;
+    html = html.replace(/<title>[\s\S]*?<\/title>/, () => `<title>${escape(seo.title)}</title>`);
+    const canonicalPath = seo.path || path;
+    const url = canonicalPath === '/' ? 'https://sucupam.com/' : `https://sucupam.com${canonicalPath}`;
     const image = new URL(seo.image || 'https://res.cloudinary.com/dyaun9c0q/image/upload/v1774488189/portada_mantas_mno1nu.webp', url).href;
     const tags = {
-      description: seo.description, keywords: (seo.keywords || []).join(', '),
-      'og:type': seo.type || 'website', 'og:title': seo.title, 'og:description': seo.description, 'og:url': url, 'og:image': image,
-      'twitter:title': seo.title, 'twitter:description': seo.description, 'twitter:url': url, 'twitter:image': image,
+      description: seo.description,
+      robots: seo.robots || 'index, follow',
+      ...(seo.keywords && seo.keywords.length > 0 ? { keywords: seo.keywords.join(', ') } : {}),
+      'og:type': seo.type || 'website',
+      'og:title': seo.title,
+      'og:description': seo.description,
+      'og:url': url,
+      'og:image': image,
+      'twitter:title': seo.title,
+      'twitter:description': seo.description,
+      'twitter:url': url,
+      'twitter:image': image,
     };
     for (const [name, value] of Object.entries(tags)) {
       const attr = name.startsWith('og:') ? 'property' : 'name';
-      html = html.replace(new RegExp(`<meta ${attr}="${name}" content="[^"]*"\\s*/?>`), `<meta ${attr}="${name}" content="${escape(value)}" />`);
+      html = html.replace(
+        new RegExp(`<meta ${attr}="${name}" content="[^"]*"\\s*/?>`),
+        () => `<meta ${attr}="${name}" content="${escape(value)}" />`,
+      );
     }
-    html = html.replace(/<link rel="canonical" href="[^"]*"\s*\/?>/, `<link rel="canonical" href="${url}" />`);
-    const jsonLd = Object.entries(schemas).map(([type, data]) => `<script id="schema-${type.toLowerCase()}" type="application/ld+json">${JSON.stringify({ '@context': 'https://schema.org', '@type': type, ...data }).replaceAll('<', '\\u003c')}</script>`).join('\n');
-    html = html.replace('</head>', `${jsonLd}\n</head>`);
-    // Cloudflare Pages serves .html files at extensionless URLs without adding a slash.
-    await rm(resolve('dist', `.${path}`, 'index.html'), { force: true });
-    const file = resolve('dist', `.${path}.html`);
-    await mkdir(dirname(file), { recursive: true });
-    await writeFile(file, html);
+    html = html.replace(/<link rel="canonical" href="[^"]*"\s*\/?>/, () => `<link rel="canonical" href="${url}" />`);
+    const jsonLd = Object.entries(schemas)
+      .map(([type, data]) => `<script id="schema-${type.toLowerCase()}" type="application/ld+json">${JSON.stringify({ '@context': 'https://schema.org', '@type': type, ...data }).replaceAll('<', '\\u003c')}</script>`)
+      .join('\n');
+    html = html.replace('</head>', () => `${jsonLd}\n</head>`);
+    if (path === '/') {
+      await writeFile(resolve('dist/index.html'), html);
+    } else {
+      // Cloudflare Pages serves .html files at extensionless URLs without adding a slash.
+      await rm(resolve('dist', `.${path}`, 'index.html'), { force: true });
+      const file = resolve('dist', `.${path}.html`);
+      await mkdir(dirname(file), { recursive: true });
+      await writeFile(file, html);
+    }
     console.log(`Prerendered ${path}`);
   }
 } finally {

@@ -29,6 +29,7 @@ export interface Product {
   metaDescription: string;
   isPrensa?: boolean;
   price: string;
+  schemaPrice: string;
 }
 
 export interface BlogPost {
@@ -112,7 +113,8 @@ Usos: Ideales para bodas al aire libre, ceremonias en iglesias, eventos nocturno
     ],
     metaTitle: "Mantas Polares Personalizadas para Souvenirs | Sucupam",
     metaDescription: "Mantas personalizadas de 1.20x0.80m para bodas y eventos. El souvenir más cálido y original de Argentina.",
-    price: "Presupuesto a medida según cantidad"
+    price: "Presupuesto a medida según cantidad",
+    schemaPrice: "8500"
   },
   {
     id: 2,
@@ -141,7 +143,8 @@ Medidas Prácticas: 15 cm (largo) x 11 cm (alto) x 7 cm (profundidad).`,
     ],
     metaTitle: "Valijitas Personalizadas Souvenirs | Sucupam",
     metaDescription: "Valijitas de 15x11x7cm personalizadas. Ideales para kits anti-resaca, bautismos y cumpleaños infantiles.",
-    price: "Presupuesto a medida según cantidad"
+    price: "Presupuesto a medida según cantidad",
+    schemaPrice: "3500"
   },
   {
     id: 3,
@@ -172,7 +175,8 @@ Impresión: Full color exterior o interior`,
     ],
     metaTitle: "Conos para Arroz y Pétalos Personalizados | Sucupam",
     metaDescription: "Conos personalizados para bodas y ceremonias. Ideales para arroz, pétalos o confeti. Diseño 100% a medida.",
-    price: "Presupuesto a medida según cantidad"
+    price: "Presupuesto a medida según cantidad",
+    schemaPrice: "1500"
   },
   {
     id: 4,
@@ -200,7 +204,8 @@ Son prácticos, elegantes y una opción económica para sorprender a tus invitad
     ],
     metaTitle: "Abanicos Personalizados para Eventos | Sucupam",
     metaDescription: "Abanicos de papel personalizados para bodas y 15 años. El souvenir ideal para eventos al aire libre en Argentina.",
-    price: "Presupuesto a medida según cantidad"
+    price: "Presupuesto a medida según cantidad",
+    schemaPrice: "2200"
   },
   {
     id: 5,
@@ -225,7 +230,8 @@ Presentación cuidada y lista para entregar a tus invitados.`,
     ],
     metaTitle: "Abanicos Paleta Personalizados | Sucupam Argentina",
     metaDescription: "Abanicos tipo paleta con palitos de madera y diseño rústico. El souvenir ideal para bautismos y bodas campestres.",
-    price: "Presupuesto a medida según cantidad"
+    price: "Presupuesto a medida según cantidad",
+    schemaPrice: "2000"
   },
   {
     id: 6,
@@ -253,7 +259,8 @@ Montado sobre Papel Kraft/Blanco: Para un estilo rústico (Kraft) o sobrio y mod
     ],
     metaTitle: "Números de Mesa Personalizados para Eventos | Sucupam",
     metaDescription: "Números de mesa para casamientos y 15 años. Formato carpita o kraft, 100% personalizados para tu fiesta en Argentina.",
-    price: "Presupuesto a medida según cantidad"
+    price: "Presupuesto a medida según cantidad",
+    schemaPrice: "1800"
   },
   {
     id: 7,
@@ -278,7 +285,8 @@ Cada kit incluye un pañuelo de papel descartable de calidad, presentado elegant
     ],
     metaTitle: "Pañuelos Lágrimas de Felicidad para Bodas | Sucupam",
     metaDescription: "Kits de pañuelos personalizados para ceremonias emotivas. El detalle ideal para las lágrimas de felicidad en tu casamiento.",
-    price: "Presupuesto a medida según cantidad"
+    price: "Presupuesto a medida según cantidad",
+    schemaPrice: "1500"
   },
   {
     id: 8,
@@ -302,7 +310,8 @@ Usos: Ideales para atar a souvenirs, identificar regalos, cerrar bolsas de papel
     ],
     metaTitle: "Tags y Tarjetitas Personalizadas para Souvenirs | Sucupam",
     metaDescription: "Tarjetitas personalizadas para souvenirs and regalos. Tags de agradecimiento con diseño exclusivo en Argentina.",
-    price: "Presupuesto a medida según cantidad"
+    price: "Presupuesto a medida según cantidad",
+    schemaPrice: "900"
   },
   {
     id: 9,
@@ -331,7 +340,8 @@ Diseño 100% a Medida: Creamos el diseño perfecto para cumpleaños, casamientos
     ],
     metaTitle: "Tarjetas con Chocolatín Personalizadas Souvenirs | Sucupam",
     metaDescription: "Souvenirs dulces y elegantes: tarjetas personalizadas con chocolate para todo tipo de eventos en Argentina.",
-    price: "Presupuesto a medida según cantidad"
+    price: "Presupuesto a medida según cantidad",
+    schemaPrice: "1800"
   },
   {
     id: 10,
@@ -369,7 +379,8 @@ Política de Devolución: Al ser un artículo personalizado y hecho a medida, no
     ],
     metaTitle: "Tarjetas Raspaditas Personalizadas para Fiestas | Sucupam",
     metaDescription: "Juegos interactivos para tu evento: tarjetas raspaditas personalizadas. Diversión asegurada para tus invitados.",
-    price: "Presupuesto a medida según cantidad"
+    price: "Presupuesto a medida según cantidad",
+    schemaPrice: "1500"
   }
 ];
 

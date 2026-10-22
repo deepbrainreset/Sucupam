@@ -16,17 +16,25 @@ export function EventLanding({ overrideEventSlug }: EventLandingProps) {
 
   if (!category) {
     return (
-      <section className="py-24 bg-brand-paper text-center fade-in">
-        <div className="container mx-auto px-6">
-          <h1 className="font-serif text-5xl mb-6 text-brand-ink">Evento no encontrado</h1>
-          <Link
-            to="/souvenirs"
-            className="text-brand-gold uppercase tracking-widest text-xs font-bold hover:underline"
-          >
-            Ver catálogo
-          </Link>
-        </div>
-      </section>
+      <>
+        <SEO
+          title="Evento no encontrado | Sucupam"
+          description="La categoría de evento que buscás no existe."
+          path="/404"
+          robots="noindex, nofollow"
+        />
+        <section className="py-24 bg-brand-paper text-center fade-in">
+          <div className="container mx-auto px-6">
+            <h1 className="font-serif text-5xl mb-6 text-brand-ink">Evento no encontrado</h1>
+            <Link
+              to="/souvenirs"
+              className="text-brand-gold uppercase tracking-widest text-xs font-bold hover:underline"
+            >
+              Ver catálogo
+            </Link>
+          </div>
+        </section>
+      </>
     );
   }
 

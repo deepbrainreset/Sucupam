@@ -93,20 +93,53 @@ export function Home() {
   return (
     <>
       <SEO
-        title="Sucupam | Souvenirs personalizados en Argentina"
-        description="Souvenirs personalizados para bodas, 15 años y eventos corporativos. Diseños premium hechos a mano en Argentina."
+        title="Sucupam | Souvenirs para Casamientos y Eventos Personalizados"
+        description="Atelier Sucupam: souvenirs para casamientos, bodas y eventos personalizados. Abanicos, pañuelos lágrimas de felicidad, mantas y tarjetas raspaditas."
         path="/"
         image="https://res.cloudinary.com/dyaun9c0q/image/upload/v1774488189/portada_mantas_mno1nu.webp"
+        keywords={[
+          "sucupam",
+          "souvenirs personalizados",
+          "souvenirs para casamientos",
+          "souvenirs para bodas",
+          "abanicos personalizados",
+          "pañuelos lágrimas de felicidad",
+          "mantas para eventos",
+          "tarjetas raspaditas",
+        ]}
       />
       
       {/* SCHEMA MARKUPS */}
       <SchemaMarkup
+        type="Organization"
+        data={{
+          name: "Sucupam",
+          url: "https://sucupam.com/",
+          logo: "https://i.ibb.co/DH3hNbmN/logo-2.png",
+          email: "sucupam@hotmail.com",
+          sameAs: [
+            "https://www.instagram.com/sucupam",
+            "https://www.tiktok.com/@sucupam"
+          ]
+        }}
+      />
+      <SchemaMarkup
+        type="WebSite"
+        data={{
+          name: "Sucupam",
+          url: "https://sucupam.com/",
+          description: "Atelier Sucupam: souvenirs para casamientos, bodas y eventos personalizados. Abanicos, pañuelos lágrimas de felicidad, mantas y tarjetas raspaditas.",
+          inLanguage: "es-AR"
+        }}
+      />
+      <SchemaMarkup
         type="LocalBusiness"
         data={{
           name: "Sucupam",
-          url: "https://sucupam.com",
+          url: "https://sucupam.com/",
           logo: "https://i.ibb.co/DH3hNbmN/logo-2.png",
           image: "https://res.cloudinary.com/dyaun9c0q/image/upload/v1774488189/portada_mantas_mno1nu.webp",
+          email: "sucupam@hotmail.com",
           areaServed: {
             "@type": "Country",
             name: "Argentina"
@@ -117,19 +150,6 @@ export function Home() {
             addressCountry: "AR"
           },
           priceRange: "$$",
-          telephone: "Consultar link de WhatsApp directo",
-          sameAs: [
-            "https://www.instagram.com/sucupam",
-            "https://www.tiktok.com/@sucupam"
-          ]
-        }}
-      />
-      <SchemaMarkup
-        type="Organization"
-        data={{
-          name: "Sucupam",
-          url: "https://sucupam.com",
-          logo: "https://i.ibb.co/DH3hNbmN/logo-2.png",
           sameAs: [
             "https://www.instagram.com/sucupam",
             "https://www.tiktok.com/@sucupam"

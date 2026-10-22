@@ -117,34 +117,33 @@ export function CategoryLanding({
         data={{
           name: h1,
           description: description,
+          image: new URL(heroImage, "https://sucupam.com").href,
           brand: {
             "@type": "Brand",
             name: "Sucupam",
           },
-          image: heroImage,
           offers: {
-            "@type": "AggregateOffer",
-            highPrice: "9999",
-            lowPrice: "100",
+            "@type": "Offer",
             priceCurrency: "ARS",
-            offerCount: String(categoryProducts.length || "10")
+            price: categoryProducts[0]?.schemaPrice || "1500",
+            availability: "https://schema.org/InStock",
+            url: `https://sucupam.com${path}`,
           },
-          areaServed: "Argentina",
         }}
       />
       <SchemaMarkup
         type="LocalBusiness"
         data={{
           name: "Sucupam",
-          url: "https://sucupam.com",
+          url: "https://sucupam.com/",
           logo: "https://i.ibb.co/DH3hNbmN/logo-2.png",
           image: heroImage,
+          email: "sucupam@hotmail.com",
           areaServed: {
             "@type": "Country",
             name: "Argentina"
           },
           priceRange: "$$",
-          telephone: "Consultar link de WhatsApp directo",
           address: {
             "@type": "PostalAddress",
             addressLocality: "Buenos Aires",

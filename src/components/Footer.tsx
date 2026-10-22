@@ -1,6 +1,5 @@
 import { Link } from "react-router-dom";
 import { MapPin, Mail, Star } from "lucide-react";
-import { eventCategories } from "../data";
 
 export function Footer() {
   return (
@@ -73,24 +72,36 @@ export function Footer() {
             <ul className="space-y-4">
               <li>
                 <Link
-                  to="/eventos/souvenirs-para-bodas"
+                  to="/souvenirs-para-bodas"
                   className="text-sm text-gray-400 hover:text-white transition-colors"
                 >
                   Souvenirs para Bodas
                 </Link>
               </li>
-              {eventCategories
-                .filter((cat) => cat.slug !== "casamientos")
-                .map((cat) => (
-                  <li key={cat.slug}>
-                    <Link
-                      to={`/eventos/${cat.slug}`}
-                      className="text-sm text-gray-400 hover:text-white transition-colors"
-                    >
-                      Souvenirs {cat.name}
-                    </Link>
-                  </li>
-                ))}
+              <li>
+                <Link
+                  to="/souvenirs-bautismos"
+                  className="text-sm text-gray-400 hover:text-white transition-colors"
+                >
+                  Souvenirs Bautismos
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/souvenirs-baby-shower"
+                  className="text-sm text-gray-400 hover:text-white transition-colors"
+                >
+                  Souvenirs Baby Shower
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/souvenirs-15-anos"
+                  className="text-sm text-gray-400 hover:text-white transition-colors"
+                >
+                  Souvenirs 15 Años
+                </Link>
+              </li>
               <li>
                 <Link
                   to="/souvenirs-cumpleanos"

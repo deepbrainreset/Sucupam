@@ -7,6 +7,7 @@ export interface PageSEO {
   keywords?: string[];
   image?: string;
   type?: 'website' | 'article';
+  robots?: string;
 }
 
 // A separate collector per server render keeps initial HTML and client metadata in sync.

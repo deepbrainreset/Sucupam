@@ -1,15 +1,34 @@
 import { renderToString } from 'react-dom/server';
 import { StaticRouter } from 'react-router-dom';
 import { AppContent } from './App';
-import { blogPosts } from './data';
+import { blogPosts, eventCategories, products } from './data';
 import { PageMetadataContext, type PageMetadata } from './pageMetadata';
 
 export const paths = [
+  '/',
+  '/souvenirs',
+  '/souvenirs-para-bodas',
+  '/souvenirs-casamientos',
+  '/souvenirs-cumpleanos',
+  '/souvenirs-bautismos',
+  '/souvenirs-baby-shower',
+  '/souvenirs-xv-anos',
+  '/souvenirs-eventos-corporativos',
+  '/souvenirs-15-anos',
+  '/souvenirs-corporativos',
+  '/abanicos-personalizados',
+  '/panuelos-descartables-personalizados',
+  '/tarjetas-raspaditas-personalizadas',
+  '/mantas-personalizadas-eventos',
+  '/papeleria-personalizada',
+  ...products.map((product) => `/producto/${product.slug}`),
+  '/eventos/souvenirs-para-bodas',
+  ...eventCategories.map((cat) => `/eventos/${cat.slug}`),
   '/blog',
   ...blogPosts.map((post) => `/blog/${post.slug}`),
-  '/abanicos-personalizados',
-  '/producto/abanicos-personalizados',
-  '/producto/abanicos-paleta-personalizado',
+  '/prensa',
+  '/contacto',
+  '/404',
 ];
 
 export function renderPage(path: string) {

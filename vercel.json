@@ -1,0 +1,34 @@
+{
+  "redirects": [
+    {
+      "source": "/sucupam",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/sucupam.com/souvenirs-para-bodas",
+      "destination": "/souvenirs-para-bodas",
+      "permanent": true
+    },
+    {
+      "source": "/souvenirs-for-bodas",
+      "destination": "/souvenirs-para-bodas",
+      "permanent": true
+    },
+    {
+      "source": "/souvenirs-de-bodas",
+      "destination": "/souvenirs-para-bodas",
+      "permanent": true
+    },
+    {
+      "source": "/souvenirs-bodas",
+      "destination": "/souvenirs-para-bodas",
+      "permanent": true
+    },
+    {
+      "source": "/souvenirs-boda",
+      "destination": "/souvenirs-para-bodas",
+      "permanent": true
+    }
+  ]
+}

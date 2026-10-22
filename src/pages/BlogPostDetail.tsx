@@ -15,19 +15,27 @@ export function BlogPostDetail() {
 
   if (!post) {
     return (
-      <section className="py-24 bg-brand-paper text-center fade-in">
-        <div className="container mx-auto px-6">
-          <span className="text-4xl block mb-4">🌸</span>
-          <h1 className="font-serif text-3xl mb-4 text-brand-dark">Artículo no encontrado</h1>
-          <p className="text-brand-ink mb-6">El contenido que buscas no existe o fue trasladado.</p>
-          <Link
-            to="/blog"
-            className="inline-flex items-center justify-center px-6 py-3 bg-brand-dark text-white rounded-xl font-sans text-xs uppercase tracking-widest font-bold hover:bg-brand-primary hover:text-brand-dark transition-colors"
-          >
-            Volver al blog
-          </Link>
-        </div>
-      </section>
+      <>
+        <SEO
+          title="Artículo no encontrado | Sucupam"
+          description="El contenido que buscas no existe o fue trasladado."
+          path="/404"
+          robots="noindex, nofollow"
+        />
+        <section className="py-24 bg-brand-paper text-center fade-in">
+          <div className="container mx-auto px-6">
+            <span className="text-4xl block mb-4">🌸</span>
+            <h1 className="font-serif text-3xl mb-4 text-brand-dark">Artículo no encontrado</h1>
+            <p className="text-brand-ink mb-6">El contenido que buscas no existe o fue trasladado.</p>
+            <Link
+              to="/blog"
+              className="inline-flex items-center justify-center px-6 py-3 bg-brand-dark text-white rounded-xl font-sans text-xs uppercase tracking-widest font-bold hover:bg-brand-primary hover:text-brand-dark transition-colors"
+            >
+              Volver al blog
+            </Link>
+          </div>
+        </section>
+      </>
     );
   }
 
@@ -72,7 +80,7 @@ export function BlogPostDetail() {
           dateModified: `${post.date}T12:00:00-03:00`,
           inLanguage: "es-AR",
           mainEntityOfPage: `https://sucupam.com/blog/${post.slug}`,
-          publisher: { "@type": "Organization", name: "Sucupam", url: "https://sucupam.com" },
+          publisher: { "@type": "Organization", name: "Sucupam", url: "https://sucupam.com/" },
           author: {
             "@type": "Organization",
             name: post.author.name,
@@ -81,7 +89,7 @@ export function BlogPostDetail() {
         }}
       />
       <SchemaMarkup type="BreadcrumbList" data={{ itemListElement: [
-        { "@type": "ListItem", position: 1, name: "Inicio", item: "https://sucupam.com" },
+        { "@type": "ListItem", position: 1, name: "Inicio", item: "https://sucupam.com/" },
         { "@type": "ListItem", position: 2, name: "Blog", item: "https://sucupam.com/blog" },
         { "@type": "ListItem", position: 3, name: post.title, item: `https://sucupam.com/blog/${post.slug}` },
       ] }} />

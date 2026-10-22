@@ -12,19 +12,27 @@ export function ProductDetail() {
   const product = products.find((p) => p.slug === productSlug);
   if (!product) {
     return (
-      <section className="py-24 bg-brand-paper text-center fade-in">
-        <div className="container mx-auto px-6">
-          <span className="text-4xl block mb-4">🌸</span>
-          <h1 className="font-serif text-3xl mb-4 text-brand-dark">Producto no encontrado</h1>
-          <p className="text-brand-ink mb-6">El producto que estás buscando no existe o fue descontinuado.</p>
-          <Link
-            to="/souvenirs"
-            className="inline-flex items-center justify-center px-6 py-3 bg-brand-dark text-white rounded-xl font-sans text-xs uppercase tracking-widest font-bold hover:bg-brand-primary hover:text-brand-dark transition-colors"
-          >
-            Volver al catálogo
-          </Link>
-        </div>
-      </section>
+      <>
+        <SEO
+          title="Producto no encontrado | Sucupam"
+          description="El producto que estás buscando no existe o fue descontinuado."
+          path="/404"
+          robots="noindex, nofollow"
+        />
+        <section className="py-24 bg-brand-paper text-center fade-in">
+          <div className="container mx-auto px-6">
+            <span className="text-4xl block mb-4">🌸</span>
+            <h1 className="font-serif text-3xl mb-4 text-brand-dark">Producto no encontrado</h1>
+            <p className="text-brand-ink mb-6">El producto que estás buscando no existe o fue descontinuado.</p>
+            <Link
+              to="/souvenirs"
+              className="inline-flex items-center justify-center px-6 py-3 bg-brand-dark text-white rounded-xl font-sans text-xs uppercase tracking-widest font-bold hover:bg-brand-primary hover:text-brand-dark transition-colors"
+            >
+              Volver al catálogo
+            </Link>
+          </div>
+        </section>
+      </>
     );
   }
 
@@ -129,8 +137,8 @@ export function ProductDetail() {
           offers: {
             "@type": "Offer",
             priceCurrency: "ARS",
-            price: product.price.replace(/[^0-9]/g, "") || "0.00",
-            availability: "https://schema.org/PreOrder",
+            price: product.schemaPrice || "1500",
+            availability: "https://schema.org/InStock",
             url: `https://sucupam.com/producto/${product.slug}`
           }
         }}
