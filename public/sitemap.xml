@@ -186,4 +186,22 @@
     <changefreq>yearly</changefreq>
     <priority>0.6</priority>
   </url>
+  <url>
+    <loc>https://sucupam.com/eventos/souvenirs-para-bodas</loc>
+  </url>
+  <url>
+    <loc>https://sucupam.com/eventos/casamientos</loc>
+  </url>
+  <url>
+    <loc>https://sucupam.com/eventos/bautismos</loc>
+  </url>
+  <url>
+    <loc>https://sucupam.com/eventos/baby-shower</loc>
+  </url>
+  <url>
+    <loc>https://sucupam.com/eventos/15-anos</loc>
+  </url>
+  <url>
+    <loc>https://sucupam.com/prensa</loc>
+  </url>
 </urlset>
